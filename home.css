@@ -1,0 +1,367 @@
+
+/* --- BANNER 3D SECTION --- */
+.banner-container {
+  padding: 100px 0;
+  background: #0B1120;
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+#drag-container,
+#spin-container {
+  position: relative;
+  display: flex;
+  margin: auto;
+  transform-style: preserve-3d;
+}
+
+#drag-container {
+  transform: rotateX(-10deg);
+}
+
+#spin-container img {
+  transform-style: preserve-3d;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 10px #d4a832;
+  -webkit-box-reflect: below 10px linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.3));
+  cursor: pointer;
+}
+
+#ground {
+  width: 900px;
+  height: 900px;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateX(90deg);
+  background: -webkit-radial-gradient(center center, farthest-side, rgba(212, 168, 50, 0.15), transparent);
+}
+
+@keyframes spin {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}
+
+@keyframes spinRevert {
+  from {
+    transform: rotateY(360deg);
+  }
+
+  to {
+    transform: rotateY(0deg);
+  }
+}
+
+/* --- DESTAQUES --- */
+.section-padding {
+  padding: 5rem 0;
+}
+
+.bg-gray {
+  background-color: #f9fafb;
+  color: #1a1a1a;
+}
+
+.section-title {
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 2.5rem;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: 0.3s;
+  border: 1px solid #e5e7eb;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+/* --- FOOTER --- */
+footer {
+  background: #0B1120;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid #d4a832;
+
+}
+
+.page-header {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #111827;
+}
+
+/* Card do Museu */
+.card-museu {
+  background: white;
+  color: #1a1a1a;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-align: center;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Efeito hover */
+.card-museu:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Ícone */
+.card-museu .card-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+/* Animação do ícone */
+.card-museu:hover .card-icon {
+  transform: scale(1.2) rotate(5deg);
+}
+
+/* Título */
+.card-museu h3 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+/* Texto */
+.card-museu p {
+  font-size: 0.95rem;
+  color: #4b5563;
+  line-height: 1.6;
+}
+
+/* Linha dourada decorativa */
+.card-museu::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #d4a832;
+}
+
+/* HERO */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* CENTRALIZA horizontal */
+  text-align: center;      /* CENTRALIZA TEXTO */
+}
+
+.hero-section .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* garante centralização total */
+}
+
+/* TÍTULO RESPONSIVO */
+.hero-section h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+}
+
+/* TEXTO */
+.hero-section p {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* BANNER */
+.banner-container {
+  padding: 3rem 0;
+  overflow: hidden;
+}
+
+/* IMAGENS */
+#spin-container img {
+  width: 120px;
+}
+
+@media (min-width: 768px) {
+  #spin-container img {
+    width: 160px;
+  }
+}
+
+@media (min-width: 1200px) {
+  #spin-container img {
+    width: 200px;
+  }
+}
+
+/* ================= RESPONSIVO PROFISSIONAL ================= */
+
+/* MOBILE */
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  .navbar-1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+
+  /* HERO */
+  .hero-section {
+    min-height: 50vh;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 2.2rem;
+    line-height: 1.2;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  .hero-section .btn {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  /* BANNER 3D (AJUSTADO PROFISSIONAL) */
+  .banner-container {
+    padding: 2rem 0;
+  }
+
+  #drag-container {
+    transform: rotateX(-5deg);
+  }
+
+  #spin-container img {
+    width: 70px;
+  }
+
+  #ground {
+    width: 250px;
+    height: 250px;
+  }
+
+  /* CARDS */
+  .card-museu {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .card-museu h3 {
+    font-size: 1.3rem;
+  }
+
+  .card-museu p {
+    font-size: 0.9rem;
+  }
+
+  /* GRID BOOTSTRAP AJUSTE */
+  .row.g-4 {
+    gap: 1.5rem;
+  }
+
+  /* FOOTER */
+  footer {
+    font-size: 0.9rem;
+    padding: 1.5rem;
+  }
+}
+
+/* TABLET */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+  .hero-section h1 {
+    font-size: 2.8rem;
+  }
+
+  #spin-container img {
+    width: 120px;
+  }
+
+  #ground {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+/* DESKTOP GRANDE */
+@media (min-width: 1200px) {
+
+  #spin-container img {
+    width: 200px;
+  }
+
+  #ground {
+    width: 700px;
+    height: 700px;
+  }
+}
+
+.menu-toggle {
+  background: none;
+  border: 1px solid #d4a832;
+  color: #d4a832;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu da Copa | Legado Mundial</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Seus CSS -->
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="global.css">
+</head>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+<body>
+
+    <!-- NAVBAR (SEM ALTERAÇÃO) -->
+    <nav class="navbar-1">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap">
+      
+          <!-- LOGO -->
+          <div class="logo">Legado Mundial</div>
+      
+          <!-- BOTÃO MOBILE -->
+          <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
+            ☰
+          </button>
+      
+          <!-- MENU -->
+          <ul id="menu" class="menu collapse d-lg-flex">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="exibicao.html">Exibição</a></li>
+            <li><a href="museu.html">Museu</a></li>
+            <li><a href="eventos.html">Eventos</a></li>
+            <li>
+              <a href="ingresso.html">
+                <button class="btn btn-red">Ingressos</button>
+              </a>
+            </li>
+          </ul>
+      
+        </div>
+      </nav>
+
+    <!-- BOTÃO DE TRADUÇÃO -->
+    <div style="text-align: right; padding: 10px 20px;">
+        <button onclick="traduzirPagina()" class="btn btn-warning">
+            🌐 Traduzir Página
+        </button>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero-section">
+        <div class="container text-white text-center">
+            <h1 class="display-3 fw-bold">
+                O SANGUE. O SUOR. <br>A GLÓRIA.
+            </h1>
+
+            <p class="lead mb-4">
+                Viva a história das copas do mundo em uma experiência interativa.
+            </p>
+
+            <a href="ingresso.html" class="btn btn-warning btn-lg fw-bold px-5">
+                Garantir Ingresso
+            </a>
+        </div>
+    </section>
+
+    <!-- BANNER -->
+    <section class="banner-container">
+        <div id="drag-container">
+            <div id="spin-container">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+                <img src="/img/taça 2026.png" alt="Copa 2026">
+            </div>
+            <div id="ground"></div>
+        </div>
+    </section>
+
+    <!-- DESTAQUES -->
+    <section class="bg-gray">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5">DESTAQUES DO MUSEU</h2>
+
+            <div class="row g-4">
+
+                <div class="col-md-4">
+                    <div class="card-museu">
+                        <div class="fs-1 mb-3">🏆</div>
+                        <h3>Sala dos Troféus</h3>
+                        <p>Veja de perto réplicas oficiais das taças da Copa do Mundo.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card-museu">
+                        <div class="fs-1 mb-3">👕</div>
+                        <h3>Camisas Históricas</h3>
+                        <p>Uma coleção única de uniformes lendários de 1930 a 2026.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card-museu">
+                        <div class="fs-1 mb-3">⭐</div>
+                        <h3>Salão das Lendas</h3>
+                        <p>As histórias dos ícones que mudaram o futebol para sempre.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="text-center py-4 border-top border-warning">
+        <p class="m-0 text-white">
+            &copy; 2026 Museu da Copa - Todos os direitos reservados.
+        </p>
+    </footer>
+
+    <!-- GOOGLE TRANSLATE (OCULTO) -->
+    <div id="google_translate_element" style="display:none;"></div>
+
+    <!-- SCRIPT TRADUÇÃO -->
+    <script>
+        function traduzirPagina() {
+            const select = document.querySelector(".goog-te-combo");
+
+            if (select) {
+                if (select.value === "en") {
+                    select.value = "pt";
+                } else {
+                    select.value = "en";
+                }
+                select.dispatchEvent(new Event("change"));
+            }
+        }
+
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'pt',
+                includedLanguages: 'pt,en',
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Seu JS -->
+    <script src="carousel.js"></script>
+
+</body>
+</html>

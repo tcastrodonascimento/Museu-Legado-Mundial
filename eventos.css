@@ -1,0 +1,81 @@
+/* eventos.css */
+
+/* Header */
+.page-header {
+    padding: 4rem 0;
+    text-align: center;
+    background-color: #111827;
+  }
+  
+  .page-header p {
+    margin-top: 1rem;
+    color: #9ca3af;
+  }
+  
+  /* Espaçamento */
+  .section-padding {
+    padding: 5rem 0;
+  }
+  
+  /* Grid */
+  .grid {
+    display: grid;
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+  
+  /* Cards */
+  .card {
+    background: white;
+    color: #1a1a1a;
+    padding: 2.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    transition: transform 0.3s;
+    border: 1px solid #e5e7eb;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  /* Ícones */
+  .card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Seção cinza */
+  .bg-gray {
+    background-color: #f9fafb;
+    color: #1a1a1a;
+  }
+  
+  /* Botões */
+  .btn-gold {
+    background-color: #d4a832;
+    color: #0B1120;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    display: inline-block;
+    transition: 0.3s;
+  }
+  
+  .btn-gold:hover {
+    background-color: #f1c40f;
+  }
+  
+  /* Ajuste para botão outline (Conhecer Museu) */
+  .btn-red {
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+  }

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Museu da Copa</title>
+
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="exibicao.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
+
+<body>
+
+    <!-- BOTÃO TRADUTOR FIXO -->
+    <button onclick="toggleLanguage()" class="translate-btn">
+        🌐 Translate
+    </button>
+
+    <!-- NAVBAR -->
+    <nav class="navbar-1">
+        <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+
+        <ul class="menu">
+            <li><a href="index.html" data-pt="Home" data-en="Home">Home</a></li>
+            <li><a href="exibicao.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+            <li><a href="museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
+            <li><a href="eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
+            <li>
+                <a href="ingresso.html">
+                    <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- TITULO -->
+    <section class="titulo">
+        <h1 data-pt="SELEÇÕES HISTÓRICAS" data-en="HISTORIC TEAMS">
+            SELEÇÕES HISTÓRICAS
+        </h1>
+
+        <p data-pt="Explore a história das seleções que marcaram as Copas do Mundo"
+           data-en="Explore the history of the teams that marked the World Cups">
+            Explore a história das seleções que marcaram as Copas do Mundo
+        </p>
+    </section>
+
+    <!-- BANDEIRAS -->
+    <section class="bandeiras">
+        <button onclick="mostrarPais('brasil')">
+            <img src="https://flagcdn.com/w80/br.png">
+            <span data-pt="Brasil" data-en="Brazil">Brasil</span>
+        </button>
+
+        <button onclick="mostrarPais('argentina')">
+            <img src="https://flagcdn.com/w80/ar.png">
+            <span data-pt="Argentina" data-en="Argentina">Argentina</span>
+        </button>
+
+        <button onclick="mostrarPais('franca')">
+            <img src="https://flagcdn.com/w80/fr.png">
+            <span data-pt="França" data-en="France">França</span>
+        </button>
+
+        <button onclick="mostrarPais('alemanha')">
+            <img src="https://flagcdn.com/w80/de.png">
+            <span data-pt="Alemanha" data-en="Germany">Alemanha</span>
+        </button>
+
+        <button onclick="mostrarPais('italia')">
+            <img src="https://flagcdn.com/w80/it.png">
+            <span data-pt="Itália" data-en="Italy">Itália</span>
+        </button>
+
+        <button onclick="mostrarPais('espanha')">
+            <img src="https://flagcdn.com/w80/es.png">
+            <span data-pt="Espanha" data-en="Spain">Espanha</span>
+        </button>
+
+        <button onclick="mostrarPais('inglaterra')">
+            <img src="https://flagcdn.com/w80/gb-eng.png">
+            <span data-pt="Inglaterra" data-en="England">Inglaterra</span>
+        </button>
+
+        <button onclick="mostrarPais('uruguai')">
+            <img src="https://flagcdn.com/w80/uy.png">
+            <span data-pt="Uruguai" data-en="Uruguay">Uruguai</span>
+        </button>
+
+        <button onclick="mostrarPais('mexico')">
+            <img src="https://flagcdn.com/w80/mx.png">
+            <span data-pt="México" data-en="Mexico">México</span>
+        </button>
+
+        <button onclick="mostrarPais('eua')">
+            <img src="https://flagcdn.com/w80/us.png">
+            <span data-pt="EUA" data-en="USA">EUA</span>
+        </button>
+
+        <button onclick="mostrarPais('canada')">
+            <img src="https://flagcdn.com/w80/ca.png">
+            <span data-pt="Canadá" data-en="Canada">Canadá</span>
+        </button>
+
+        <button onclick="mostrarPais('curacao')">
+            <img src="https://flagcdn.com/w80/cw.png">
+            <span data-pt="Curaçao" data-en="Curaçao">Curaçao</span>
+        </button>
+    </section>
+
+    <!-- CONTEÚDO -->
+    <section class="conteudo" id="conteudo">
+        <h2 data-pt="Selecione uma seleção" data-en="Select a team">
+            Selecione uma seleção
+        </h2>
+
+        <p data-pt="Clique em uma bandeira para ver a história."
+           data-en="Click on a flag to see the history.">
+            Clique em uma bandeira para ver a história.
+        </p>
+    </section>
+
+    <script src="exibicao.js"></script>
+
+    <!-- SCRIPT TRADUÇÃO COMPLETA -->
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+        }
+    </script>
+
+</body>
+</html>

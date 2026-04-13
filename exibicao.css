@@ -1,0 +1,142 @@
+.titulo {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.bandeiras {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+}
+
+.bandeiras button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #d4a832;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.bandeiras button:hover { transform: scale(1.1); background: #f1c40f; }
+
+.conteudo {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #f8f9fa;
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+}
+
+.galeria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.galeria img { width: 100%; border-radius: 8px; }
+
+/* BOTÃO MENU MOBILE */
+.menu-toggle {
+  background: none;
+  border: 1px solid #d4a832;
+  color: #d4a832;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  /* MENU */
+  .menu {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  /* BOTÕES BANDEIRAS */
+  .bandeiras {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .bandeiras button {
+    width: 100%;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .bandeiras img {
+    width: 30px;
+  }
+
+  /* TEXTO */
+  .titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  .titulo p {
+    font-size: 0.95rem;
+  }
+
+  /* CONTEÚDO */
+  .conteudo {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+
+}
+
+/* BOTÃO TRADUTOR FIXO (PROFISSIONAL) */
+.translate-btn {
+  position: fixed;
+  top: 90px;
+  right: 20px;
+  z-index: 2000;
+
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.translate-btn:hover {
+  transform: scale(1.05);
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+
+  .titulo h1 {
+    font-size: 1.8rem;
+  }
+
+  .bandeiras button {
+    flex-direction: column;
+    padding: 10px;
+    font-size: 0.8rem;
+  }
+
+  .conteudo {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+}
