@@ -79,3 +79,60 @@
     display: inline-block;
     transition: 0.3s;
   }
+
+  /* BOTÃO TRADUTOR FIXO (PROFISSIONAL) */
+.translate-btn {
+  position: fixed;
+  top: 130px;
+  right: 20px;
+  z-index: 2000;
+
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.translate-btn:hover {
+  transform: scale(1.05);
+}
+
+#btnLeitor {
+  position: fixed;
+  bottom: 410px; /* Mantido sua posição */
+  right: 10px;   /* Mantido sua posição */
+
+  background-color: #e53935;
+  color: white;
+
+  border: none;
+  
+  /* --- MUDANÇA DE FORMATO --- */
+  width: 40px;         /* Largura aumentada para caber o texto/ícone */
+  height: 40px;         /* Altura ajustada para o formato retangular */
+  border-radius: 8px;   /* Curvatura leve nos cantos igual à imagem */
+  /* -------------------------- */
+
+  font-size: 18px;      /* Ajustado levemente para o novo formato */
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  z-index: 9999;
+
+  transition: 0.3s;
+}
+
+/* Efeito hover */
+#btnLeitor:hover {
+  transform: scale(1.05); /* Escala levemente reduzida para botões retangulares */
+  background-color: #c62828; /* Um tom de vermelho levemente mais escuro */
+}

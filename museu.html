@@ -9,8 +9,19 @@
     <link rel="stylesheet" href="museu.css">
     
 </head>
-
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+      <div class="vw-plugin-top-wrapper"></div>
+    </div>
+  </div>
+  
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+  <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+  </script>
 <body>
+    
     <!-- Navbar -->
     <nav class="navbar-1">
 
@@ -98,6 +109,81 @@
             <a href="ingresso.html" class="btn btn-gold">Comprar Ingresso</a>
         </div>
     </section>
-</body>
 
+    
+    <button onclick="ativarLeitor()" id="btnLeitor">
+  🔊
+</button>
+
+    <script>
+    let leitorAtivo = false;
+    let ultimoTexto = "";
+    let timeout;
+
+    // Ativar / desativar
+    function ativarLeitor() {
+    leitorAtivo = !leitorAtivo;
+
+    const botao = document.getElementById("btnLeitor");
+    botao.innerText = leitorAtivo
+        ? "🔇"
+        : "🔊";
+    }
+
+    // Função de fala
+    function falar(texto) {
+    if (!texto || texto === ultimoTexto) return;
+
+    ultimoTexto = texto;
+
+    clearTimeout(timeout);
+    timeout = setTimeout(() => {
+        const fala = new SpeechSynthesisUtterance(texto);
+        fala.lang = "pt-BR";
+        speechSynthesis.cancel();
+        speechSynthesis.speak(fala);
+    }, 300); // pequeno atraso pra evitar spam
+    }
+
+    // Pegar texto inteligente
+    function pegarTexto(el) {
+    if (!el) return "";
+
+    return (
+        el.getAttribute("aria-label") ||
+        el.alt ||
+        el.placeholder ||
+        el.title ||
+        el.innerText
+    );
+    }
+
+    // Mouse mais preciso
+    document.addEventListener("mousemove", function(e) {
+    if (!leitorAtivo) return;
+
+    const elemento = document.elementFromPoint(e.clientX, e.clientY);
+
+    if (!elemento) return;
+
+    // Só elementos importantes
+    if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+        const texto = pegarTexto(elemento);
+        falar(texto);
+    }
+    });
+
+    // Toque no celular
+    document.addEventListener("touchstart", function(e) {
+    if (!leitorAtivo) return;
+
+    const elemento = e.target;
+
+    if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
+        const texto = pegarTexto(elemento);
+        falar(texto);
+    }
+    });
+    </script>
+</body>
 </html>
