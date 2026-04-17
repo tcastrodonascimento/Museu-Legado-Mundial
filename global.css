@@ -63,3 +63,25 @@ h1, h2, h3 {
   border-radius: 6px;
   cursor: pointer;
 }
+
+.btn-tradutor {
+    background-color: #333; /* Cor neutra para contrastar com o vermelho */
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.btn-tradutor:hover {
+    background-color: #555;
+}
+
+/* Esconde a barra superior que o Google força no topo */
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+body { top: 0px !important; }

@@ -9,7 +9,7 @@
   
   .page-header p {
     margin-top: 1rem;
-    color: #9ca3af;
+    color: white;
   }
   
   /* Espaçamento padrão */
@@ -26,7 +26,10 @@
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
   }
-  
+.titulo-museu{
+color: white;
+  }
+
   /* Cards */
   .card {
     background: white;
