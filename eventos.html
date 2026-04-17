@@ -25,109 +25,121 @@
 
 <body>
 
-    <!-- NAVBAR (SEM ALTERAÇÃO) -->
-    <nav class="navbar-1">
-        <div class="container d-flex justify-content-between align-items-center flex-wrap">
-      
-          <!-- LOGO -->
-          <div class="logo">Legado Mundial</div>
-      
-          <!-- BOTÃO MOBILE -->
-          <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
-            ☰
-          </button>
-      
-          <!-- MENU -->
-          <ul id="menu" class="menu collapse d-lg-flex">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="exibicao.html">Exibição</a></li>
-            <li><a href="museu.html">Museu</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
+<!-- NAVBAR -->
+<nav class="navbar-1">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+        <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+        <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">☰</button>
+        <ul id="menu" class="menu collapse d-lg-flex">
+            <li><a href="index.html" data-pt="Início" data-en="Home">Início</a></li>
+            <li><a href="exibicao.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+            <li><a href="museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
+            <li><a href="eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
             <li>
-              <a href="ingresso.html">
-                <button class="btn btn-red">Ingressos</button>
-              </a>
+                <a href="ingresso.html">
+                    <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
+                </a>
             </li>
-          </ul>
-      
-        </div>
-      </nav>
+        </ul>
+    </div>
+</nav>
 
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1 data-pt="EXPERIÊNCIAS INTERATIVAS" data-en="INTERACTIVE EXPERIENCES">EXPERIÊNCIAS INTERATIVAS</h1>
+        <p data-pt="Nosso museu é mais que observação - é participação! Viva experiências únicas com tecnologia de ponta"
+           data-en="Our museum is more than observation - it's participation! Live unique experiences with cutting-edge technology">
+            Nosso museu é mais que observação - é participação! Viva experiências únicas com tecnologia de ponta
+        </p>
+    </div>
+</div>
 
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="container">
-            <h1>EXPERIÊNCIAS INTERATIVAS</h1>
-            <p>Nosso museu é mais que observação - é participação! Viva experiências únicas com tecnologia de ponta</p>
+<!-- Events Grid -->
+<section class="section-padding">
+    <div class="container">
+        <div class="grid grid-3">
+            <div class="card">
+                <div class="card-icon">🎮</div>
+                <h3 data-pt="Chute a Gol VR" data-en="Penalty Kick VR">Chute a Gol VR</h3>
+                <p data-pt="Experimente a emoção de bater um pênalti decisivo em uma Copa do Mundo usando realidade virtual. Sinta a pressão de um estádio lotado com 80 mil torcedores."
+                   data-en="Experience the thrill of taking a decisive penalty kick in a World Cup using virtual reality. Feel the pressure of a packed stadium with 80,000 fans.">
+                    Experimente a emoção de bater um pênalti decisivo em uma Copa do Mundo usando realidade virtual.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🖥️</div>
+                <h3 data-pt="Mesa Tática Interativa" data-en="Interactive Tactical Board">Mesa Tática Interativa</h3>
+                <p data-pt="Use tecnologia touchscreen para analisar jogadas históricas, criar táticas e entender as estratégias que levaram times à vitória nas Copas."
+                   data-en="Use touchscreen technology to analyze historic plays, create tactics, and understand the strategies that led teams to victory in the World Cups.">
+                    Use tecnologia touchscreen para analisar jogadas históricas e criar táticas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🔊</div>
+                <h3 data-pt="Cabine do Grito" data-en="Scream Cabin">Cabine do Grito</h3>
+                <p data-pt="Teste o volume do seu grito de 'Gol!' em uma cabine especial que mede decibéis. Compare seu resultado com outros visitantes."
+                   data-en="Test the volume of your 'Goal!' shout in a special booth that measures decibels. Compare your result with other visitors.">
+                    Teste o volume do seu grito de "Gol!" em uma cabine especial que mede decibéis.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎥</div>
+                <h3 data-pt="Cinema 360°" data-en="360° Cinema">Cinema 360°</h3>
+                <p data-pt="Assista aos melhores momentos das Copas em uma sala de cinema imersiva com projeção 360°. Reviva os gols mais importantes como se estivesse em campo."
+                   data-en="Watch the best moments of the World Cups in an immersive cinema room with 360° projection. Relive the most important goals as if you were on the field.">
+                    Assista aos melhores momentos das Copas em uma sala de cinema imersiva com projeção 360°.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎤</div>
+                <h3 data-pt="Simulador de Narração" data-en="Narration Simulator">Simulador de Narração</h3>
+                <p data-pt="Torne-se um narrador esportivo! Escolha uma jogada histórica e grave sua própria narração emocionante."
+                   data-en="Become a sports commentator! Choose a historic play and record your own exciting narration.">
+                    Torne-se um narrador esportivo! Escolha uma jogada histórica e grave sua própria narração.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🎯</div>
+                <h3 data-pt="Desafio da Precisão" data-en="Precision Challenge">Desafio da Precisão</h3>
+                <p data-pt="Teste sua pontaria chutando bolas em alvos específicos. Tecnologia de rastreamento mede velocidade, precisão e efeito."
+                   data-en="Test your aim by kicking balls at specific targets. Tracking technology measures speed, precision, and curve.">
+                    Teste sua pontaria chutando bolas em alvos específicos.
+                </p>
+            </div>
         </div>
     </div>
-    <!-- Events Grid -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">🎮</div>
-                    <h3>Chute a Gol VR</h3>
-                    <p>Experimente a emoção de bater um pênalti decisivo em uma Copa do Mundo usando realidade virtual.
-                        Sinta a pressão de um estádio lotado com 80 mil torcedores.</p>
-                </div>
+</section>
 
-                <div class="card">
-                    <div class="card-icon">🖥️</div>
-                    <h3>Mesa Tática Interativa</h3>
-                    <p>Use tecnologia touchscreen para analisar jogadas históricas, criar táticas e entender as
-                        estratégias que levaram times à vitória nas Copas.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🔊</div>
-                    <h3>Cabine do Grito</h3>
-                    <p>Teste o volume do seu grito de "Gol!" em uma cabine especial que mede decibéis. Compare seu
-                        resultado com outros visitantes e veja quem é o torcedor mais empolgado.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🎥</div>
-                    <h3>Cinema 360°</h3>
-                    <p>Assista aos melhores momentos das Copas em uma sala de cinema imersiva com projeção 360°. Reviva
-                        os gols mais importantes como se estivesse em campo.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🎤</div>
-                    <h3>Simulador de Narração</h3>
-                    <p>Torne-se um narrador esportivo! Escolha uma jogada histórica e grave sua própria narração
-                        emocionante. Leve para casa sua versão dos gols mais memoráveis.</p>
-                </div>
-
-                <div class="card">
-                    <div class="card-icon">🎯</div>
-                    <h3>Desafio da Precisão</h3>
-                    <p>Teste sua pontaria chutando bolas em alvos específicos. Tecnologia de rastreamento mede
-                        velocidade, precisão e efeito. Será que você tem a técnica dos craques?</p>
-                </div>
+<!-- Info Section -->
+<section class="bg-gray" style="padding: 4rem 0;">
+    <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; color: #0B1120;"
+                data-pt="INCLUÍDO NO SEU INGRESSO" 
+                data-en="INCLUDED IN YOUR TICKET">
+                INCLUÍDO NO SEU INGRESSO
+            </h2>
+            <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-bottom: 1.5rem;"
+               data-pt="Todas estas experiências interativas estão incluídas no ingresso padrão. Visitantes VIP têm acesso prioritário e sessões exclusivas com duração estendida."
+               data-en="All these interactive experiences are included in the standard ticket. VIP visitors have priority access and exclusive extended sessions.">
+                Todas estas experiências interativas estão incluídas no ingresso padrão.
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="ingresso.html" class="btn btn-gold" data-pt="Garantir Ingresso" data-en="Get Ticket">Garantir Ingresso</a>
+                <a href="museu.html" class="btn btn-red" 
+                   style="background-color: transparent; border: 2px solid #dc2626; color: #dc2626;"
+                   data-pt="Conhecer o Museu" data-en="Explore the Museum">Conhecer o Museu</a>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Info Section -->
-    <section class="bg-gray" style="padding: 4rem 0;">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; color: #0B1120;">INCLUÍDO NO SEU
-                    INGRESSO</h2>
-                <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-bottom: 1.5rem;">Todas estas
-                    experiências interativas estão incluídas no ingresso padrão. Visitantes VIP têm acesso prioritário e
-                    sessões exclusivas com duração estendida.</p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="ingresso.html" class="btn btn-gold">Garantir Ingresso</a>
-                    <a href="museu.html" class="btn btn-red"
-                        style="background-color: transparent; border: 2px solid #dc2626; color: #dc2626;">Conhecer o
-                        Museu</a>
-                </div>
-            </div>
-        </div>
-    </section>
     <button onclick="ativarLeitor()" id="btnLeitor">
   🔊
 </button>
@@ -202,5 +214,22 @@
     }
     });
     </script>
+
+        <!-- SCRIPT TRADUÇÃO -->
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+        }
+    </script>
+        <!-- Cole o código aqui -->
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+        EN
+    </button>
 </body>  
 </html>

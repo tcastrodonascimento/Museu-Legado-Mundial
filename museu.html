@@ -26,103 +26,133 @@
 
 <body>
 
-    <!-- NAVBAR (SEM ALTERAÇÃO) -->
-    <nav class="navbar-1">
-        <div class="container d-flex justify-content-between align-items-center flex-wrap">
-      
-          <!-- LOGO -->
-          <div class="logo">Legado Mundial</div>
-      
-          <!-- BOTÃO MOBILE -->
-          <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
-            ☰
-          </button>
-      
-          <!-- MENU -->
-          <ul id="menu" class="menu collapse d-lg-flex">
-            <li><a href="index.html">Início</a></li>
-            <li><a href="exibicao.html">Exibição</a></li>
-            <li><a href="museu.html">Museu</a></li>
-            <li><a href="eventos.html">Eventos</a></li>
-            <li>
-              <a href="ingresso.html">
-                <button class="btn btn-red">Ingressos</button>
-              </a>
-            </li>
-          </ul>
-      
-        </div>
-      </nav>
-
-
-    <!-- Page Header -->
-    <div class="page-header">
-        <div class="container">
-            <h1 class="titulo-museu">O QUE TEMOS NO MUSEU</h1>
-            <p>Uma jornada completa pela história das Copas do Mundo, com acervos únicos e experiências inesquecíveis
-            </p>
-        </div>
+<!-- NAVBAR -->
+<nav class="navbar-1">
+    <div class="container d-flex justify-content-between align-items-center flex-wrap">
+  
+      <!-- LOGO -->
+      <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+  
+      <!-- BOTÃO MOBILE -->
+      <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
+        ☰
+      </button>
+  
+      <!-- MENU -->
+      <ul id="menu" class="menu collapse d-lg-flex">
+        <li><a href="index.html" data-pt="Início" data-en="Home">Início</a></li>
+        <li><a href="exibicao.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+        <li><a href="museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
+        <li><a href="eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
+        <li>
+          <a href="ingresso.html">
+            <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
+          </a>
+        </li>
+      </ul>
+  
     </div>
+</nav>
 
-    <!-- Museum Exhibits -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="grid grid-3">
-                <div class="card">
-                    <div class="card-icon">🏆</div>
-                    <h3>Sala dos Troféus</h3>
-                    <p>Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações.
-                        Nossa coleção inclui troféus de todas as edições, desde 1930 até os dias atuais.</p>
-                </div>
 
-                <div class="card">
-                    <div class="card-icon">👕</div>
-                    <h3>Camisas Lendárias</h3>
-                    <p>Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da
-                        história. Veja de perto as camisas de Pelé, Maradona, Zidane e muito mais.</p>
-                </div>
 
-                <div class="card">
-                    <div class="card-icon">⭐</div>
-                    <h3>Salão das Lendas</h3>
-                    <p>Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e
-                        objetos pessoais que fizeram a diferença nas Copas.</p>
-                </div>
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <h1 class="titulo-museu" 
+            data-pt="O QUE TEMOS NO MUSEU" 
+            data-en="WHAT WE HAVE IN THE MUSEUM">
+            O que temos no Museu
+        </h1>
+        <p data-pt="Uma jornada completa pela história das Copas do Mundo, com acervos únicos e experiências inesquecíveis"
+           data-en="A complete journey through the history of the World Cups, with unique collections and unforgettable experiences">
+            Uma jornada completa pela história das Copas do Mundo, com acervos únicos e experiências inesquecíveis
+        </p>
+    </div>
+</div>
 
-                <div class="card">
-                    <div class="card-icon">📷</div>
-                    <h3>Galeria Fotográfica</h3>
-                    <p>Momentos inesquecíveis capturados em imagens que contam a história emocionante de cada Copa do
-                        Mundo.</p>
-                </div>
+<!-- Museum Exhibits -->
+<section class="section-padding">
+    <div class="container">
+        <div class="grid grid-3">
+            <div class="card">
+                <div class="card-icon">🏆</div>
+                <h3 data-pt="Sala dos Troféus" data-en="Trophy Room">Sala dos Troféus</h3>
+                <p data-pt="Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações. Nossa coleção inclui troféus de todas as edições, desde 1930 até os dias atuais."
+                   data-en="Admire official replicas of World Cup trophies and historic trophies that marked generations. Our collection includes trophies from all editions, from 1930 to the present day.">
+                    Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações.
+                </p>
+            </div>
 
-                <div class="card">
-                    <div class="card-icon">📚</div>
-                    <h3>Biblioteca do Futebol</h3>
-                    <p>Acesso a milhares de documentos, jornais históricos, programas oficiais e estatísticas completas
-                        de todas as Copas.</p>
-                </div>
+            <div class="card">
+                <div class="card-icon">👕</div>
+                <h3 data-pt="Camisas Lendárias" data-en="Legendary Jerseys">Camisas Lendárias</h3>
+                <p data-pt="Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da história. Veja de perto as camisas de Pelé, Maradona, Zidane e muito mais."
+                   data-en="A unique collection of original uniforms and authentic replicas worn by the greatest players in history. See the jerseys of Pelé, Maradona, Zidane and more up close.">
+                    Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da história.
+                </p>
+            </div>
 
-                <div class="card">
-                    <div class="card-icon">🏅</div>
-                    <h3>Recordes Mundiais</h3>
-                    <p>Explore os recordes mais impressionantes da história das Copas: artilheiros, maiores goleadas,
-                        jogos históricos e muito mais.</p>
-                </div>
+            <div class="card">
+                <div class="card-icon">⭐</div>
+                <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">Salão das Lendas</h3>
+                <p data-pt="Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais que fizeram a diferença nas Copas."
+                   data-en="Discover the stories of the greatest players through interactive panels, historical videos, and personal objects that made a difference in the World Cups.">
+                    Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📷</div>
+                <h3 data-pt="Galeria Fotográfica" data-en="Photo Gallery">Galeria Fotográfica</h3>
+                <p data-pt="Momentos inesquecíveis capturados em imagens que contam a história emocionante de cada Copa do Mundo."
+                   data-en="Unforgettable moments captured in images that tell the exciting history of each World Cup.">
+                    Momentos inesquecíveis capturados em imagens que contam a história emocionante de cada Copa do Mundo.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">📚</div>
+                <h3 data-pt="Biblioteca do Futebol" data-en="Football Library">Biblioteca do Futebol</h3>
+                <p data-pt="Acesso a milhares de documentos, jornais históricos, programas oficiais e estatísticas completas de todas as Copas."
+                   data-en="Access to thousands of documents, historical newspapers, official programs, and complete statistics of all World Cups.">
+                    Acesso a milhares de documentos, jornais históricos, programas oficiais e estatísticas completas.
+                </p>
+            </div>
+
+            <div class="card">
+                <div class="card-icon">🏅</div>
+                <h3 data-pt="Recordes Mundiais" data-en="World Records">Recordes Mundiais</h3>
+                <p data-pt="Explore os recordes mais impressionantes da história das Copas: artilheiros, maiores goleadas, jogos históricos e muito mais."
+                   data-en="Explore the most impressive records in World Cup history: top scorers, biggest wins, historic matches, and more.">
+                    Explore os recordes mais impressionantes da história das Copas: artilheiros, maiores goleadas e muito mais.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- CTA Section -->
-    <section class="bg-gray" style="padding: 4rem 0;">
-        <div class="container text-center">
-            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: #0B1120;">PRONTO PARA ESTA
-                EXPERIÊNCIA?</h2>
-            <p style="font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem;">Garanta seu ingresso e visite o maior
-                museu da Copa do Mundo</p>
-            <a href="ingresso.html" class="btn btn-gold">Comprar Ingresso</a>
-        </div>
-    </section>
+
+<!-- CTA Section -->
+<section class="bg-gray" style="padding: 4rem 0;">
+    <div class="container text-center">
+        <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: #0B1120;"
+            data-pt="PRONTO PARA ESTA EXPERIÊNCIA?" 
+            data-en="READY FOR THIS EXPERIENCE?">
+            PRONTO PARA ESTA EXPERIÊNCIA?
+        </h2>
+        <p style="font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem;"
+           data-pt="Garanta seu ingresso e visite o maior museu da Copa do Mundo"
+           data-en="Guarantee your ticket and visit the largest World Cup museum">
+            Garanta seu ingresso e visite o maior museu da Copa do Mundo
+        </p>
+        <a href="ingresso.html" class="btn btn-gold" 
+           data-pt="Comprar Ingresso" 
+           data-en="Buy Ticket">
+            Comprar Ingresso
+        </a>
+    </div>
+</section>
 
     
     <button onclick="ativarLeitor()" id="btnLeitor">
@@ -199,5 +229,22 @@
     }
     });
     </script>
+
+        <!-- SCRIPT TRADUÇÃO COMPLETA -->
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+        }
+    </script>
+        <!-- Cole o código aqui -->
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+        EN
+    </button>
 </body>
 </html>

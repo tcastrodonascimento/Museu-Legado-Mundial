@@ -46,7 +46,7 @@ h1, h2, h3 {
 }
 
 .menu a {
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -64,24 +64,74 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.btn-tradutor {
-    background-color: #333; /* Cor neutra para contrastar com o vermelho */
+.translate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 8px 15px;
-    border-radius: 5px;
+    border-radius: 50px;
     cursor: pointer;
-    font-size: 14px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    z-index: 9999;
+    font-family: Arial, sans-serif;
 }
 
-.btn-tradutor:hover {
-    background-color: #555;
+.translate-button:hover {
+    background-color: #0056b3;
 }
 
-/* Esconde a barra superior que o Google força no topo */
-.goog-te-banner-frame.skiptranslate { display: none !important; }
-body { top: 0px !important; }
+/* Esconde a barra de ferramentas superior do Google para um visual limpo */
+.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
+    display: none !important;
+}
+body {
+    top: 0px !important;
+}
+.translate-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4285F4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Impede o Google de empurrar o site para baixo */
+body {
+    top: 0 !important;
+    position: static !important;
+}
+.skiptranslate {
+    display: none !important;
+}
+.goog-te-banner-frame {
+    display: none !important;
+}
+
+/* Estilo do Botão - Forçando visibilidade */
+.translate-button {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999999 !important; /* Valor muito alto para ficar sobre tudo */
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff !important;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-family: sans-serif;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    display: block !important; /* Garante que ele apareça */
+}
+
