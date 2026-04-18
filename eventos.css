@@ -136,3 +136,9 @@
   transform: scale(1.05); /* Escala levemente reduzida para botões retangulares */
   background-color: #c62828; /* Um tom de vermelho levemente mais escuro */
 }
+
+/* FOOTER */
+footer {
+  font-size: 0.9rem;
+  padding: 1.5rem;
+}
