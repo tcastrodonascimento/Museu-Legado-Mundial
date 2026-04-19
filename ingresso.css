@@ -1,4 +1,15 @@
+body {
+  background-color: #0B1120 !important;
+}
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+}
 .tickets {
+  color: #d4a832;
   display: flex;
   justify-content: center;
   gap: 2rem;
@@ -12,87 +23,133 @@
   border-radius: 15px;
   border: 2px solid #d4a832;
   text-align: center;
-  width: 250px;
+  width: 450px;
+}
+.ticket-card button {
+  background: #d4a832; /* dourado */
+  color: #0B1120;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.ticket-card button:hover {
+  background: #b8902e;
+  transform: scale(1.05);
 }
 
 /* Modal de Pagamento */
 .modal {
+  color: #000000;
+  position: fixed; /* ← adicione isso! */
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: #0B1120(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9); /* ← corrigido */
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
+  z-index: 9998;
 }
 
 .modal-content {
-  background: #fff;
-  color: #333;
+  background-color: #1a2236; /* ou #0B1120 se preferir mais escuro */
+  color: #d4a832; /* texto dourado para combinar com o tema */
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3.2rem;
   border-radius: 10px;
-  width: 100%;
+  width: 110%;
   max-width: 450px;
+  border: 2px solid #d4a832; /* opcional, para manter o padrão visual */
 }
 
 input, select {
+  background: #d4a832; 
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: 1px solid #ccc;
+  border: 1px solid #ffffff;
   border-radius: 5px;
 }
 
 .btn-finalizar { 
-  background: #10b981; 
-  color: white; 
+  background: #d4a832; 
+  color: #0B1120; 
   border: none; 
-  padding: 15px; 
+  padding: 12.5px; 
   width: 100%; 
   cursor: pointer; 
   border-radius: 5px; 
   font-weight: bold; 
+  margin-top: -30px;
 }
+
 
 #btnLeitor {
   position: fixed;
-  bottom: 410px; /* Mantido sua posição */
-  right: 10px;   /* Mantido sua posição */
-
+  bottom: 500px;
+  right: 10px;   
   background-color: #e53935;
   color: white;
-
   border: none;
-  
-  /* --- MUDANÇA DE FORMATO --- */
-  width: 40px;         /* Largura aumentada para caber o texto/ícone */
-  height: 40px;         /* Altura ajustada para o formato retangular */
-  border-radius: 8px;   /* Curvatura leve nos cantos igual à imagem */
-  /* -------------------------- */
-
-  font-size: 18px;      /* Ajustado levemente para o novo formato */
+  /* --- FORMATO --- */
+  width: 40px;         
+  height: 40px;         
+  border-radius: 8px;   
+  font-size: 18px;  
   cursor: pointer;
-
   display: flex;
   align-items: center;
   justify-content: center;
-
   box-shadow: 0 4px 10px rgba(0,0,0,0.3);
   z-index: 9999;
-
   transition: 0.3s;
 }
 
 /* Efeito hover */
 #btnLeitor:hover {
-  transform: scale(1.05); /* Escala levemente reduzida para botões retangulares */
-  background-color: #c62828; /* Um tom de vermelho levemente mais escuro */
+  transform: scale(1.05);
+  background-color: #c62828;
 }
 
+.btn-cancelar {
+  background: #d4a832; /* vermelho */
+  color: #0b1120;
+  border: none;
+  padding: 12px;
+  width: 100%;
+  cursor: pointer;
+  border-radius: 5px;
+  font-weight: bold;
+  margin-top: 1rem;
+  transition: 0.3s;
+}
+
+.btn-cancelar:hover {
+  background: #d4a832;
+  transform: scale(1.03);
+}
 /* FOOTER */
 footer {
+  background-color: #0B1120; 
   font-size: 0.9rem;
   padding: 1.5rem;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* empurra o footer pra baixo */
 }

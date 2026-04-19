@@ -104,7 +104,7 @@
 
 #btnLeitor {
   position: fixed;
-  bottom: 410px; /* Mantido sua posição */
+  bottom: 500px; /* Mantido sua posição */
   right: 10px;   /* Mantido sua posição */
 
   background-color: #e53935;

@@ -64,59 +64,6 @@ h1, h2, h3 {
   cursor: pointer;
 }
 
-.translate-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    z-index: 9999;
-    font-family: Arial, sans-serif;
-}
-
-.translate-button:hover {
-    background-color: #0056b3;
-}
-
-/* Esconde a barra de ferramentas superior do Google para um visual limpo */
-.goog-te-banner-frame.skiptranslate, .goog-te-gadget-icon {
-    display: none !important;
-}
-body {
-    top: 0px !important;
-}
-.translate-button {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #4285F4;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 30px;
-    cursor: pointer;
-    font-weight: bold;
-    z-index: 10000;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-/* Impede o Google de empurrar o site para baixo */
-body {
-    top: 0 !important;
-    position: static !important;
-}
-.skiptranslate {
-    display: none !important;
-}
-.goog-te-banner-frame {
-    display: none !important;
-}
-
 /* Estilo do Botão - Forçando visibilidade */
 .translate-button {
     position: fixed;
