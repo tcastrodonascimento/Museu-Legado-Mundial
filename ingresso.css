@@ -92,8 +92,8 @@ input, select {
 
 #btnLeitor {
   position: fixed;
-  bottom: 500px;
-  right: 10px;   
+  bottom: 305px; /* Mantido sua posição */
+  right: 10px;   /* Mantido sua posição */  
   background-color: #e53935;
   color: white;
   border: none;
@@ -115,6 +115,14 @@ input, select {
 #btnLeitor:hover {
   transform: scale(1.05);
   background-color: #c62828;
+}
+.menu-toggle {
+  background: none;
+  border: 1px solid #d4a832;
+  color: #d4a832;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  border-radius: 5px;
 }
 
 .btn-cancelar {

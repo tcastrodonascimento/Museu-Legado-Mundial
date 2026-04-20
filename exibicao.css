@@ -54,51 +54,77 @@
   border-radius: 5px;
   cursor: pointer;
 }
-
-/* RESPONSIVO */
+/* MOBILE */
 @media (max-width: 768px) {
 
-  /* MENU */
-  .menu {
+  /* NAVBAR */
+  .navbar-1 {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 1rem;
-    margin-top: 1rem;
+    align-items: center;
+    padding: 1rem;
   }
 
-  /* BOTÕES BANDEIRAS */
-  .bandeiras {
-    gap: 10px;
-    padding: 10px;
+  .logo {
+    margin-bottom: 0.5rem;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 0.8rem;
+  }
+
+  .menu li {
+    margin: 0;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
+}
+/* Estilos base (mobile) */
+.titulo h1 {
+  font-size: 1.8rem;
+}
+
+.bandeiras button {
+  flex-direction: column;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+
+.bandeiras img {
+  width: 30px;
+}
+
+.conteudo {
+  margin: 1rem;
+  padding: 1.5rem;
+}
+
+/* Ajustes para telas maiores (PC) */
+@media (min-width: 769px) {
+  .titulo h1 {
+    font-size: 2.5rem;
   }
 
   .bandeiras button {
-    width: 100%;
-    justify-content: center;
-    padding: 10px;
+    flex-direction: row;
+    font-size: 1rem;
   }
 
   .bandeiras img {
-    width: 30px;
+    width: 40px;
   }
 
-  /* TEXTO */
-  .titulo h1 {
-    font-size: 1.8rem;
-  }
-
-  .titulo p {
-    font-size: 0.95rem;
-  }
-
-  /* CONTEÚDO */
   .conteudo {
-    margin: 1rem;
-    padding: 1.5rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 900px;
   }
-
-}
+}   
 
 /* BOTÃO TRADUTOR FIXO (PROFISSIONAL) */
 .translate-btn {
@@ -143,7 +169,7 @@
 
 #btnLeitor {
   position: fixed;
-  bottom: 500px; /* Mantido sua posição */
+  bottom: 305px; /* Mantido sua posição */
   right: 10px;   /* Mantido sua posição */
 
   background-color: #e53935;
