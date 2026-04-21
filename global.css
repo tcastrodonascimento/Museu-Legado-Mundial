@@ -82,3 +82,65 @@ h1, h2, h3 {
     display: block !important; /* Garante que ele apareça */
 }
 
+/* FOOTER */
+.footer {
+    background-color: #0d0d0d;
+    color: #ccc;
+    padding: 40px 0 20px;
+    font-size: 14px;
+}
+
+/* CONTAINER FLEX */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* COLUNAS */
+.footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* TÍTULOS */
+.footer-section h4 {
+    color: #fff;
+    margin-bottom: 15px;
+    font-size: 16px;
+}
+
+/* TEXTOS */
+.footer-section p {
+    margin-bottom: 8px;
+}
+
+/* LINKS */
+.footer-section a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 6px;
+    transition: 0.3s;
+}
+
+.footer-section a:hover {
+    color: #f1c40f;
+}
+
+/* PARTE DE BAIXO */
+.footer-bottom {
+    text-align: center;
+    border-top: 1px solid #222;
+    margin-top: 30px;
+    padding-top: 15px;
+    font-size: 12px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}

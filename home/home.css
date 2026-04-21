@@ -395,3 +395,42 @@ footer {
   transform: scale(1.05);
   background-color: #c62828;
 }
+
+/* COOKIE BANNER */
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #111;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+    flex-wrap: wrap;
+}
+
+.cookie-banner p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.cookie-banner a {
+    color: #f1c40f;
+    text-decoration: underline;
+}
+
+.cookie-banner button {
+    background: #f1c40f;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+}
+
+.cookie-banner button:hover {
+    background: #d4ac0d;
+}
