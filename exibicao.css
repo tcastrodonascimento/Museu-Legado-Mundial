@@ -1,209 +1,225 @@
-.titulo {
-  text-align: center;
-  margin: 3rem 0;
+body {
+  background: #0B1120;
+  color: white;
+  font-family: 'Poppins', sans-serif;
 }
 
-.bandeiras {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 15px;
-  padding: 20px;
+/* ================= NAV ================= */
+.navbar-1 {
+  padding: 1rem 0;
+  border-bottom: 1px solid #d4a832;
 }
 
-.bandeiras button {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: #d4a832;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
+.logo {
+  color: #facc15;
   font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
   transition: 0.3s;
 }
 
-.bandeiras button:hover { transform: scale(1.1); background: #f1c40f; }
-
-.conteudo {
-  max-width: 900px;
-  margin: 2rem auto;
-  background: #f8f9fa;
-  color: #333;
-  padding: 2rem;
-  border-radius: 12px;
+.menu a:hover {
+  color: #facc15;
 }
 
-.galeria {
+/* ================= TÍTULO ================= */
+.text-center h1 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+}
+
+.text-center p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* ================= GRID ================= */
+.cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
-  margin-top: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 15px;
 }
 
-.galeria img { width: 100%; border-radius: 8px; }
-
-/* BOTÃO MENU MOBILE */
-.menu-toggle {
-  background: none;
-  border: 1px solid #d4a832;
-  color: #d4a832;
-  font-size: 1.5rem;
-  padding: 5px 10px;
-  border-radius: 5px;
+/* ================= CARD ================= */
+.card-selecao {
+  background: #111827;
+  border-radius: 12px;
+  overflow: hidden;
   cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #1f2937;
+  display: flex;
+  flex-direction: column;
 }
+
+.card-selecao:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+/* BANDEIRA (MENOR E MAIS PADRÃO) */
+.card-selecao img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* TEXTO MAIS COMPACTO */
+.card-body {
+  padding: 10px;
+  text-align: center;
+}
+
+.card-body h3 {
+  font-size: 1rem;
+  color: #facc15;
+  margin-bottom: 5px;
+}
+
+.card-body p {
+  font-size: 0.75rem;
+  color: #ccc;
+  line-height: 1.1rem;
+}
+
+/* ================= MODAL ================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.85);
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-content {
+  background: #111827;
+  padding: 15px;
+  border-radius: 12px;
+  max-width: 420px;
+  width: 92%;
+}
+
+/* ================= GALERIA ================= */
+#galeria img {
+  width: 100%;
+  max-height: 180px;
+  object-fit: contain;
+  margin-top: 10px;
+  display: none;
+}
+
+/* ================= ZOOM ================= */
+.zoom {
+  position: fixed;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,0.8);
+}
+
+.zoom img {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+}
+
+/* FECHAR */
+.fechar {
+  float: right;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* ================= RESPONSIVO ================= */
+
+/* TABLET */
+@media (max-width: 992px) {
+  .cards-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .modal-content {
+    max-width: 90%;
+  }
+}
+
 /* MOBILE */
 @media (max-width: 768px) {
-
-  /* NAVBAR */
-  .navbar-1 {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-  }
-
-  .logo {
-    margin-bottom: 0.5rem;
-  }
 
   .menu {
     flex-direction: column;
     align-items: center;
-    width: 100%;
-    gap: 0.8rem;
+    gap: 10px;
+    margin-top: 10px;
   }
 
-  .menu li {
-    margin: 0;
-  }
-
-  .menu a {
-    font-size: 1rem;
-  }
-}
-/* Estilos base (mobile) */
-.titulo h1 {
-  font-size: 1.8rem;
-}
-
-.bandeiras button {
-  flex-direction: column;
-  padding: 10px;
-  font-size: 0.8rem;
-}
-
-.bandeiras img {
-  width: 30px;
-}
-
-.conteudo {
-  margin: 1rem;
-  padding: 1.5rem;
-}
-
-/* Ajustes para telas maiores (PC) */
-@media (min-width: 769px) {
-  .titulo h1 {
-    font-size: 2.5rem;
-  }
-
-  .bandeiras button {
-    flex-direction: row;
-    font-size: 1rem;
-  }
-
-  .bandeiras img {
-    width: 40px;
-  }
-
-  .conteudo {
-    margin: 2rem auto;
-    padding: 2rem;
-    max-width: 900px;
-  }
-}   
-
-/* BOTÃO TRADUTOR FIXO (PROFISSIONAL) */
-.translate-btn {
-  position: fixed;
-  top: 120px;
-  right: 20px;
-  z-index: 2000;
-
-  background: linear-gradient(135deg, #facc15, #fbbf24);
-  border: none;
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
-
-.translate-btn:hover {
-  transform: scale(1.05);
-}
-
-/* RESPONSIVO */
-@media (max-width: 768px) {
-
-  .titulo h1 {
+  .text-center h1 {
     font-size: 1.8rem;
   }
 
-  .bandeiras button {
-    flex-direction: column;
-    padding: 10px;
+  .text-center p {
+    font-size: 0.9rem;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .card-selecao img {
+    height: 140px; /* melhora visual no mobile */
+  }
+
+  .card-body p {
     font-size: 0.8rem;
   }
 
-  .conteudo {
-    margin: 1rem;
-    padding: 1.5rem;
+  .modal-content {
+    padding: 12px;
+    width: 95%;
+  }
+
+  #galeria img {
+    max-height: 160px;
   }
 }
 
-#btnLeitor {
-  position: fixed;
-  bottom: 305px; /* Mantido sua posição */
-  right: 10px;   /* Mantido sua posição */
+/* CELULAR PEQUENO */
+@media (max-width: 480px) {
 
-  background-color: #e53935;
-  color: white;
-
-  border: none;
-  
-  /* --- MUDANÇA DE FORMATO --- */
-  width: 40px;         /* Largura aumentada para caber o texto/ícone */
-  height: 40px;         /* Altura ajustada para o formato retangular */
-  border-radius: 8px;   /* Curvatura leve nos cantos igual à imagem */
-  /* -------------------------- */
-
-  font-size: 18px;      /* Ajustado levemente para o novo formato */
-  cursor: pointer;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-  z-index: 9999;
-
-  transition: 0.3s;
-}
-
-/* Efeito hover */
-#btnLeitor:hover {
-  transform: scale(1.05); /* Escala levemente reduzida para botões retangulares */
-  background-color: #c62828; /* Um tom de vermelho levemente mais escuro */
-}
-
-  /* FOOTER */
-  footer {
-    font-size: 0.9rem;
-    padding: 1.5rem;
+  .logo {
+    font-size: 1rem;
   }
+
+  .card-body h3 {
+    font-size: 0.95rem;
+  }
+
+  .card-body p {
+    font-size: 0.75rem;
+  }
+
+  .card-selecao img {
+    height: 120px;
+  }
+
+  .zoom img {
+    max-width: 95vw;
+    max-height: 70vh;
+  }
+}

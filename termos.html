@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Termos de Uso | Museu da Copa</title>
+
+```
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+    body {
+        background-color: #0B1120;
+        color: #fff;
+        font-family: Arial, sans-serif;
+    }
+
+    .container-custom {
+        max-width: 900px;
+        margin: auto;
+        padding: 60px 20px;
+    }
+
+    h1, h2 {
+        color: #facc15;
+        margin-top: 30px;
+    }
+
+    p {
+        color: #d1d5db;
+        line-height: 1.6;
+    }
+
+    .translate-button {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        background: #facc15;
+        border: none;
+        padding: 10px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #btnLeitor {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: #e53935;
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    .btn-voltar {
+        position: fixed;
+        top: 20px;
+        left: 20px;
+        background: #e53935;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        font-weight: bold;
+        z-index: 9999;
+    }
+
+    [vw-access-button] {
+        z-index: 99999 !important;
+        bottom: 120px !important;
+    }
+</style>
+```
+
+</head>
+
+<body>
+
+<!-- BOTÃO VOLTAR -->
+
+<button onclick="voltarPagina()" class="btn-voltar">← Voltar</button>
+
+<!-- VLibras -->
+
+<div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+</div>
+
+<button onclick="toggleLanguage()" class="translate-button">EN</button> <button onclick="ativarLeitor()" id="btnLeitor">🔊</button>
+
+<div class="container-custom">
+
+```
+<h1 data-pt="Termos de Uso" data-en="Terms of Use"></h1>
+<p data-pt="Última atualização: 2026" data-en="Last updated: 2026"></p>
+
+<h2 data-pt="1. Aceitação dos Termos" data-en="1. Acceptance of Terms"></h2>
+<p data-pt="Ao acessar este site, você concorda com os presentes termos de uso."
+   data-en="By accessing this website, you agree to these terms of use."></p>
+
+<h2 data-pt="2. Uso do Site" data-en="2. Use of the Website"></h2>
+<p data-pt="O usuário compromete-se a utilizar o site de forma ética e legal."
+   data-en="Users agree to use the website ethically and legally."></p>
+
+<h2 data-pt="3. Propriedade Intelectual" data-en="3. Intellectual Property"></h2>
+<p data-pt="Todo o conteúdo do site é protegido por direitos autorais."
+   data-en="All content on this website is protected by copyright."></p>
+
+<h2 data-pt="4. Limitação de Responsabilidade" data-en="4. Limitation of Liability"></h2>
+<p data-pt="Não nos responsabilizamos por danos decorrentes do uso do site."
+   data-en="We are not liable for damages resulting from use of the site."></p>
+
+<h2 data-pt="5. Links Externos" data-en="5. External Links"></h2>
+<p data-pt="O site pode conter links para terceiros, sem responsabilidade sobre seu conteúdo."
+   data-en="The site may contain links to third-party websites, without responsibility for their content."></p>
+
+<h2 data-pt="6. Alterações nos Termos" data-en="6. Changes to Terms"></h2>
+<p data-pt="Os termos podem ser alterados a qualquer momento."
+   data-en="Terms may be changed at any time."></p>
+
+<h2 data-pt="7. Privacidade" data-en="7. Privacy"></h2>
+<p data-pt="O uso do site também está sujeito à nossa Política de Privacidade."
+   data-en="Use of the site is also subject to our Privacy Policy."></p>
+
+<h2 data-pt="8. Legislação" data-en="8. Law"></h2>
+<p data-pt="Estes termos são regidos pela legislação brasileira."
+   data-en="These terms are governed by Brazilian law."></p>
+
+<h2 data-pt="9. Contato" data-en="9. Contact"></h2>
+<p>contato@museudacopa.com</p>
+```
+
+</div>
+
+<!-- SCRIPTS -->
+
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+<script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+<script>
+let leitorAtivo = false;
+
+function ativarLeitor() {
+    leitorAtivo = !leitorAtivo;
+}
+
+function falar(texto) {
+    if (!texto) return;
+    const fala = new SpeechSynthesisUtterance(texto);
+    fala.lang = "pt-BR";
+    speechSynthesis.cancel();
+    speechSynthesis.speak(fala);
+}
+
+document.addEventListener("mousemove", function(e) {
+    if (!leitorAtivo) return;
+    const el = document.elementFromPoint(e.clientX, e.clientY);
+    if (el && el.innerText) falar(el.innerText);
+});
+</script>
+
+<script>
+let currentLang = "pt";
+
+function aplicarIdioma() {
+    document.querySelectorAll("[data-pt]").forEach(el => {
+        el.innerText = el.getAttribute("data-" + currentLang);
+    });
+}
+
+function toggleLanguage() {
+    currentLang = currentLang === "pt" ? "en" : "pt";
+    aplicarIdioma();
+
+    document.querySelector(".translate-button").innerText =
+        currentLang === "pt" ? "EN" : "PT";
+}
+
+window.onload = function () {
+    aplicarIdioma();
+};
+</script>
+
+<script>
+function voltarPagina() {
+    if (document.referrer) {
+        window.history.back();
+    } else {
+        window.location.href = "/home/index.html";
+    }
+}
+</script>
+
+</body>
+</html>
