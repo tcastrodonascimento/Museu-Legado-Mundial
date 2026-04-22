@@ -140,42 +140,57 @@
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
-
+    
             <!-- Coluna 1 -->
             <div class="footer-section">
-                <h4>Museu da Copa</h4>
-                <p>&copy; 2026 Todos os direitos reservados.</p>
-                <p>Av. Exemplo, 123<br>São Paulo, SP - Brasil</p>
+                <h4 data-pt="Museu da Copa" data-en="World Cup Museum">Museu da Copa</h4>
+                <p data-pt="© 2026 Todos os direitos reservados." data-en="© 2026 All rights reserved.">
+                    © 2026 Todos os direitos reservados.
+                </p>
+                <p data-pt="Av. Exemplo, 123 São Paulo, SP - Brasil" data-en="Example Ave, 123 São Paulo, SP - Brazil">
+                    Av. Exemplo, 123<br>São Paulo, SP - Brasil
+                </p>
             </div>
-
+    
             <!-- Coluna 2 -->
             <div class="footer-section">
-                <h4>Contato</h4>
+                <h4 data-pt="Contato" data-en="Contact">Contato</h4>
                 <p>(11) 99999-9999</p>
                 <p>contato@museudacopa.com</p>
-                <p>Terça a Domingo: 10h às 18h</p>
+                <p data-pt="Terça a Domingo: 10h às 18h" data-en="Tuesday to Sunday: 10 AM - 6 PM">
+                    Terça a Domingo: 10h às 18h
+                </p>
             </div>
-
+    
             <!-- Coluna 3 -->
             <div class="footer-section">
-                <h4>Links</h4>
-                <a href="/politica.html">Política de Privacidade</a>
-                <a href="/acessibilidade.html">Acessibilidade</a>
-                <a href="/termos.html">Termos de Uso</a>
+                <h4 data-pt="Links" data-en="Links">Links</h4>
+                <a href="/politica.html" data-pt="Política de Privacidade" data-en="Privacy Policy">
+                    Política de Privacidade
+                </a>
+                <a href="/acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">
+                    Acessibilidade
+                </a>
+                <a href="/termos.html" data-pt="Termos de Uso" data-en="Terms of Use">
+                    Termos de Uso
+                </a>
             </div>
-
+    
             <!-- Coluna 4 -->
             <div class="footer-section">
-                <h4>Redes</h4>
+                <h4 data-pt="Redes" data-en="Social Media">Redes</h4>
                 <a href="#">Instagram</a>
                 <a href="#">Facebook</a>
                 <a href="#">YouTube</a>
             </div>
-
+    
         </div>
-
+    
         <div class="footer-bottom">
-            <p>Desenvolvido por @LadyJobs</p>
+            <p data-pt="Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai"
+               data-en="Developed by @Mariajobs and sponsored by Adilson Bonsai">
+                Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai
+            </p>
         </div>
     </footer>
 
@@ -256,18 +271,29 @@
         });
     </script>
 
-    <!-- SCRIPT TRADUÇÃO COMPLETA -->
-    <script>
-        let currentLang = "pt";
-
-        function toggleLanguage() {
-            currentLang = currentLang === "pt" ? "en" : "pt";
-
-            document.querySelectorAll("[data-pt]").forEach(el => {
-                el.innerText = el.getAttribute("data-" + currentLang);
-            });
-        }
-    </script>
+        <!-- SCRIPT TRADUÇÃO -->
+        <script>
+            let currentLang = "pt";
+        
+            function toggleLanguage() {
+                const botao = document.getElementById("btn-translate");
+        
+                // alterna idioma
+                currentLang = currentLang === "pt" ? "en" : "pt";
+        
+                // troca textos da página
+                document.querySelectorAll("[data-pt]").forEach(el => {
+                    el.innerText = el.getAttribute("data-" + currentLang);
+                });
+        
+                // 👇 ATUALIZA O TEXTO DO BOTÃO
+                botao.innerText = currentLang.toUpperCase();
+            }
+        </script>
+          <!-- Cole o código aqui -->
+          <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+            PT
+        </button>
 
     <script>
         function aceitarCookies() {
@@ -312,11 +338,6 @@
             }
         };
     </script>
-
-    <!-- Cole o código aqui -->
-    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
-        EN
-    </button>
     
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
