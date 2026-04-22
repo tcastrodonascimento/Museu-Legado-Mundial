@@ -212,3 +212,14 @@ function fecharZoom() {
 }
 
 carregar();
+
+// Exemplo de como deve estar a criação do card no seu JS
+function renderizarCards(selecoes) {
+    const grid = document.getElementById('grid');
+    grid.innerHTML = selecoes.map(selecao => `
+        <div class="card-selecao" onclick="abrirModal('${selecao.id}')">
+            <img src="${selecao.imagem}" alt="Bandeira ${selecao.nome}">
+            <h3>${selecao.nome}</h3>
+        </div>
+    `).join('');
+}
