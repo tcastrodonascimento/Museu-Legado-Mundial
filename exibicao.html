@@ -125,7 +125,6 @@
     function toggleLanguage() {
       currentLang = currentLang === "pt" ? "en" : "pt";
       document.getElementById("btn-translate").innerText = currentLang === "pt" ? "EN" : "PT";
-      
 
       document.querySelectorAll("[data-pt]").forEach(el => {
         el.innerText = el.getAttribute("data-" + currentLang);
