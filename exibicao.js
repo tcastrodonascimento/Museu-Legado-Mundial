@@ -224,3 +224,4 @@ function renderizarCards(selecoes) {
         </div>
     `).join('');
 }
+

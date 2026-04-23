@@ -42,6 +42,34 @@ body {
   font-size: 0.95rem;
 }
 
+/* Header da Página (Igual ao de Eventos e Home) */
+.text-center.mb-5 {
+    padding: 5rem 0; /* Padding padrão de 80px */
+    background-color: #111827;
+    margin-bottom: 0 !important; /* Remove a margem do bootstrap para encostar no fundo */
+    border-bottom: 1px solid rgba(212, 168, 50, 0.1);
+}
+
+.text-center.mb-5 h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(2.5rem, 6vw, 4rem); /* Tamanho responsivo igual à Home */
+    letter-spacing: 0.05em;
+    color: white;
+}
+
+.text-center.mb-5 p {
+    color: #9ca3af;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+/* Container do Main */
+main.container {
+    max-width: 1280px !important; /* Medida exata do seu global.css */
+    padding-top: 5rem !important;
+    padding-bottom: 5rem !important;
+}
+
 /* ================= GRID ================= */
 .cards-grid {
   display: grid;
