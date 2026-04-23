@@ -25,6 +25,7 @@ function init(delayTime) {
     }
 }
 
+
 function applyTransform(obj) {
     if (tY > 180) tY = 180;
     if (tY < 0) tY = 0;

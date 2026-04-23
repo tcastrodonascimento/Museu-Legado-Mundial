@@ -213,6 +213,7 @@ function fecharZoom() {
 
 carregar();
 
+
 // Exemplo de como deve estar a criação do card no seu JS
 function renderizarCards(selecoes) {
     const grid = document.getElementById('grid');

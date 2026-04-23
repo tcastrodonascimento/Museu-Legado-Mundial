@@ -101,6 +101,7 @@ body {
   transition: 0.5s;
 }
 
+
 .card-selecao:hover::after {
   left: 100%;
 }
