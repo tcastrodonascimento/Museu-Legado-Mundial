@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museu Mundial | Galeria Interativa</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/exibicaoNova.css">
+    <link rel="stylesheet" href="/global.css">
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar-1">
+            <div class="container d-flex justify-content-between align-items-center flex-wrap">
+                <div class="logo">Legado Mundial</div>
+
+                <!-- BOTÃO MOBILE -->
+                <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
+                    ☰
+                </button>
+
+                <ul id="menu" class="menu collapse d-lg-flex">
+                    <li><a href="/home/index.html">Início</a></li>
+                    <li><a href="/exibicaoNova.html">Exibição</a></li>
+                    <li><a href="/museu.html">Museu</a></li>
+                    <li><a href="/eventos.html">Eventos</a></li>
+                    <li>
+                        <a href="/ingresso.html">
+                            <button class="btn btn-red">Ingressos</button>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <div class="hero-content">
+            <span class="subtitle">IMERSÃO CULTURAL & ESPORTIVA</span>
+            <h1>Galeria das Nações</h1>
+            <div class="divider"></div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="grid-paises" id="gridPaises"></div>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+
+            <div class="footer-section">
+                <h4 data-pt="Museu da Copa" data-en="World Cup Museum">Museu da Copa</h4>
+                <p>© 2026 Todos os direitos reservados.</p>
+                <p>
+                    Av. Exemplo, 123<br>
+                    São Paulo, SP - Brasil
+                </p>
+            </div>
+
+            <div class="footer-section">
+                <h4 data-pt="Contato" data-en="Contact">Contato</h4>
+                <p>(11) 99999-9999</p>
+                <p>contato@museudacopa.com</p>
+                <p>Terça a Domingo: 10h às 18h</p>
+            </div>
+
+            <div class="footer-section">
+                <h4>Links</h4>
+                <a href="/politica.html">Política de Privacidade</a>
+                <a href="/acessibilidade.html">Acessibilidade</a>
+                <a href="/termos.html">Termos de Uso</a>
+            </div>
+
+            <div class="footer-section">
+                <h4>Redes</h4>
+                <a href="#">Instagram</a>
+                <a href="#">Facebook</a>
+                <a href="#">YouTube</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>
+                Desenvolvido por @Mariajobs e patrocinado por LadyJobs
+            </p>
+        </div>
+    </footer>
+
+    <div id="modalPais" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    <script>
+        let currentLang = "pt";
+
+        function toggleLanguage() {
+            currentLang = currentLang === "pt" ? "en" : "pt";
+
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
+
+            document.getElementById("btn-translate").innerText =
+                currentLang.toUpperCase();
+        }
+    </script>
+
+    <script src="/exibicaoNova.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+        PT
+    </button>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+
+    <script>
+        new window.VLibras.Widget(
+            'https://vlibras.gov.br/app'
+        );
+    </script>
+
+</body>
+
+<button onclick="ativarLeitor()" id="btnLeitor">
+    🔊
+</button>
+
+<script>
+    let leitorAtivo = false;
+    let ultimoTexto = "";
+    let timeout;
+
+    function ativarLeitor() {
+        leitorAtivo = !leitorAtivo;
+        document.getElementById("btnLeitor").innerText =
+            leitorAtivo ? "🔇" : "🔊";
+    }
+
+    function falar(texto) {
+        if (!texto || texto === ultimoTexto) return;
+
+        ultimoTexto = texto;
+
+        clearTimeout(timeout);
+
+        timeout = setTimeout(() => {
+            const fala = new SpeechSynthesisUtterance(texto);
+            fala.lang = "pt-BR";
+            speechSynthesis.cancel();
+            speechSynthesis.speak(fala);
+        }, 300);
+    }
+
+    function pegarTexto(el) {
+        return (
+            el.getAttribute("aria-label") ||
+            el.alt ||
+            el.placeholder ||
+            el.title ||
+            el.innerText
+        );
+    }
+
+    document.addEventListener("mousemove", (e) => {
+        if (!leitorAtivo) return;
+
+        const elemento = document.elementFromPoint(
+            e.clientX, e.clientY
+        );
+
+        if (
+            elemento?.matches(
+                "button,a,p,h1,h2,h3,span,img,input,label"
+            )
+        ) {
+            falar(pegarTexto(elemento));
+        }
+    });
+</script>
+
+</html>
