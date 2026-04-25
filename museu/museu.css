@@ -1,0 +1,305 @@
+/* ==========================================================================
+   1. CONFIGURAÇÕES GERAIS E HEADER
+   ========================================================================== */
+
+.page-header {
+  padding: 4rem 0;
+  text-align: center;
+  background-color: #111827;
+}
+
+.page-header p {
+  margin-top: 1rem;
+  color: white;
+}
+
+.titulo-museu {
+  color: white;
+}
+
+.section-padding {
+  padding: 5rem 0;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+/* ==========================================================================
+   2. CARDS SUPERIORES (RESUMO)
+   ========================================================================== */
+
+.card {
+  background: white;
+  color: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  transition: transform 0.3s;
+  border: 1px solid #e5e7eb;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card-image-container {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 1.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  background-color: #f3f4f6;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.1);
+}
+
+/* ==========================================================================
+   3. SEÇÃO DE GALERIA PROFISSIONAL (TEXTO CIMA / IMAGENS BAIXO)
+   ========================================================================== */
+
+.detalhes-museu {
+  padding: 100px 0;
+  background-color: #ffffff;
+}
+
+/* Bloco que agrupa texto e imagens */
+.detalhe-bloco {
+  margin-bottom: 180px;
+  /* Grande espaço entre os temas */
+}
+
+/* Cabeçalho com o texto centralizado */
+.detalhe-cabecalho {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 60px auto;
+}
+
+.detalhe-cabecalho h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  color: #111827;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+/* Linha decorativa dourada */
+.linha-decorativa {
+  width: 80px;
+  height: 4px;
+  background-color: #d4a832;
+  margin: 0 auto 25px auto;
+}
+
+.detalhe-cabecalho p {
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* Grid das Imagens Grandes e Quadradas */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  /* Espaço entre as fotos */
+  width: 100%;
+}
+
+.foto-item {
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.foto-item img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  /* Força o formato QUADRADO perfeito */
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.foto-item:hover img {
+  transform: scale(1.1);
+  /* Zoom elegante ao passar o mouse */
+}
+
+/* ==========================================================================
+   4. COMPONENTES (BOTÕES, TRADUTOR, LEITOR)
+   ========================================================================== */
+
+.btn-gold {
+  background-color: #d4a832 !important;
+  color: #200b0b !important;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 0.5rem;
+  display: inline-block;
+  transition: 0.3s;
+  border: none;
+}
+
+.btn-gold:hover {
+  background-color: #f1c40f !important;
+  color: #000 !important;
+}
+
+.bg-gray {
+  background-color: #fbf9f9;
+}
+
+.translate-btn {
+  position: fixed;
+  top: 120px;
+  right: 20px;
+  z-index: 2000;
+  background: linear-gradient(135deg, #facc15, #fbbf24);
+  border: none;
+  padding: 12px 18px;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+#btnLeitor {
+  position: fixed;
+  bottom: 305px;
+  right: 10px;
+  background-color: #e53935;
+  color: white;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  z-index: 9999;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   5. RODAPÉ E RESPONSIVIDADE
+   ========================================================================== */
+
+footer {
+  font-size: 0.9rem;
+  padding: 1.5rem;
+}
+
+@media (max-width: 991px) {
+  .detalhe-cabecalho h2 {
+    font-size: 2.2rem;
+  }
+
+  .galeria-grid {
+    grid-template-columns: repeat(3, 1fr);
+    /* Mantém 3 fotos menores em tablets */
+    gap: 15px;
+  }
+
+  .detalhe-bloco {
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 650px) {
+  .galeria-grid {
+    grid-template-columns: 1fr;
+    /* 1 foto grande por linha no celular */
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- ANIMAÇÕES PROFISSIONAIS --- */
+
+/* Estado inicial: invisível e um pouco abaixo */
+.detalhe-bloco {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.8s ease-out;
+}
+
+/* Estado ativo: quando o scroll chega nele */
+.detalhe-bloco.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- LIGHTBOX (IMAGEM EXPANDIDA) --- */
+
+.lightbox-modal {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fundo um pouco mais escuro para destacar */
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    cursor: zoom-out;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-modal img {
+    /* Força a largura a chegar perto do limite da tela */
+    width: 90vw !important; 
+    height: 90vh !important;
+    
+    /* Mantém a proporção sem achatar */
+    object-fit: contain !important; 
+    
+    max-width: none !important;
+    max-height: none !important;
+    
+    border-radius: 8px;
+    box-shadow: 0 0 50px rgba(0,0,0,0.6);
+    
+    animation: zoomIn 0.4s ease-out;
+}
+.lightbox-modal.open {
+    display: flex;
+}
+
+.lightbox-modal.open img {
+    transform: scale(1);
+}
+
+@keyframes zoomIn {
+    from { 
+        transform: scale(0.7); 
+        opacity: 0; 
+    }
+    to { 
+        transform: scale(1); 
+        opacity: 1; 
+    }
+}
