@@ -198,3 +198,12 @@ h1, h2, h3 {
         text-align: center;
     }
 }
+
+footer {
+    background: linear-gradient(to top, #111827, rgba(17, 24, 39, 0.8)), 
+                url('caminho/da/sua/arte-copa.jpg');
+    background-size: cover;
+    background-position: bottom;
+    color: white;
+    padding: 4rem 1.5rem;
+}
