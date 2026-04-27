@@ -4,7 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museu Mundial | Galeria Interativa</title>
+
+    <title data-pt="Museu Mundial | Galeria Interativa" 
+           data-en="World Museum | Interactive Gallery">
+           Museu Mundial | Galeria Interativa
+    </title>
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/exibicaoNova.css">
     <link rel="stylesheet" href="/global.css">
@@ -15,7 +20,12 @@
     <header>
         <nav class="navbar-1">
             <div class="container d-flex justify-content-between align-items-center flex-wrap">
-                <div class="logo">Legado Mundial</div>
+                
+                <div class="logo" 
+                     data-pt="Legado Mundial" 
+                     data-en="World Legacy">
+                     Legado Mundial
+                </div>
 
                 <!-- BOTÃO MOBILE -->
                 <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
@@ -23,21 +33,63 @@
                 </button>
 
                 <ul id="menu" class="menu collapse d-lg-flex">
-                    <li><a href="/home/index.html">Início</a></li>
-                    <li><a href="/museu/museu.html">Museu</a></li>
-                    <li><a href="/eventos/eventos.html">Eventos</a></li>
-                    <li><a href="/exibicaoNova.html">Exibição</a></li>
+                    <li>
+                        <a href="/home/index.html" 
+                           data-pt="Início" 
+                           data-en="Home">
+                           Início
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/museu/museu.html" 
+                           data-pt="Museu" 
+                           data-en="Museum">
+                           Museu
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/eventos/eventos.html" 
+                           data-pt="Eventos" 
+                           data-en="Events">
+                           Eventos
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="/exibicaoNova.html" 
+                           data-pt="Exibição" 
+                           data-en="Exhibition">
+                           Exibição
+                        </a>
+                    </li>
+
                     <li>
                         <a href="/ingresso.html">
-                            <button class="btn btn-red">Ingressos</button>
+                            <button class="btn btn-red"
+                                    data-pt="Ingressos"
+                                    data-en="Tickets">
+                                    Ingressos
+                            </button>
                         </a>
                     </li>
                 </ul>
             </div>
         </nav>
+
         <div class="hero-content">
-            <span class="subtitle">IMERSÃO CULTURAL & ESPORTIVA</span>
-            <h1>Galeria das Nações</h1>
+            <span class="subtitle" 
+                  data-pt="IMERSÃO CULTURAL & ESPORTIVA" 
+                  data-en="CULTURAL & SPORTS IMMERSION">
+                  IMERSÃO CULTURAL & ESPORTIVA
+            </span>
+
+            <h1 data-pt="Galeria das Nações" 
+                data-en="Gallery of Nations">
+                Galeria das Nações
+            </h1>
+
             <div class="divider"></div>
         </div>
     </header>
@@ -48,67 +100,83 @@
 
     <footer class="footer">
         <div class="container footer-content">
-
+    
             <div class="footer-section">
                 <h4 data-pt="Museu da Copa" data-en="World Cup Museum">Museu da Copa</h4>
-                <p>© 2026 Todos os direitos reservados.</p>
-                <p>
+    
+                <p data-pt="© 2026 Todos os direitos reservados." 
+                   data-en="© 2026 All rights reserved.">
+                   © 2026 Todos os direitos reservados.
+                </p>
+    
+                <p data-pt="Av. Exemplo, 123 - São Paulo, SP - Brasil"
+                   data-en="123 Example Ave - São Paulo, SP - Brazil">
                     Av. Exemplo, 123<br>
                     São Paulo, SP - Brasil
                 </p>
             </div>
-
+    
             <div class="footer-section">
                 <h4 data-pt="Contato" data-en="Contact">Contato</h4>
+    
                 <p>(11) 99999-9999</p>
-                <p>contato@museudacopa.com</p>
-                <p>Terça a Domingo: 10h às 18h</p>
+    
+                <p data-pt="contato@museudacopa.com"
+                   data-en="contact@worldcupmuseum.com">
+                   contato@museudacopa.com
+                </p>
+    
+                <p data-pt="Terça a Domingo: 10h às 18h"
+                   data-en="Tuesday to Sunday: 10am to 6pm">
+                   Terça a Domingo: 10h às 18h
+                </p>
             </div>
-
+    
             <div class="footer-section">
-                <h4>Links</h4>
-                <a href="/politica.html">Política de Privacidade</a>
-                <a href="/acessibilidade.html">Acessibilidade</a>
-                <a href="/termos.html">Termos de Uso</a>
+                <h4 data-pt="Links" data-en="Links">Links</h4>
+    
+                <a href="/politica.html"
+                   data-pt="Política de Privacidade"
+                   data-en="Privacy Policy">
+                   Política de Privacidade
+                </a>
+    
+                <a href="/acessibilidade.html"
+                   data-pt="Acessibilidade"
+                   data-en="Accessibility">
+                   Acessibilidade
+                </a>
+    
+                <a href="/termos.html"
+                   data-pt="Termos de Uso"
+                   data-en="Terms of Use">
+                   Termos de Uso
+                </a>
             </div>
-
+    
             <div class="footer-section">
-                <h4>Redes</h4>
-                <a href="#">Instagram</a>
-                <a href="#">Facebook</a>
-                <a href="#">YouTube</a>
+                <h4 data-pt="Redes" data-en="Social">Redes</h4>
+    
+                <a href="#" data-pt="Instagram" data-en="Instagram">Instagram</a>
+                <a href="#" data-pt="Facebook" data-en="Facebook">Facebook</a>
+                <a href="#" data-pt="YouTube" data-en="YouTube">YouTube</a>
             </div>
-
+    
         </div>
-
+    
         <div class="footer-bottom">
-            <p>
-                Desenvolvido por @Mariajobs e patrocinado por LadyJobs
+            <p data-pt="Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai"
+               data-en="Developed by @Mariajobs and sponsored by Adilson Bonsai">
+                Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai
             </p>
         </div>
     </footer>
-
     <div id="modalPais" class="modal">
         <div class="modal-content">
             <span class="close-btn">&times;</span>
             <div id="modalBody"></div>
         </div>
     </div>
-
-    <script>
-        let currentLang = "pt";
-
-        function toggleLanguage() {
-            currentLang = currentLang === "pt" ? "en" : "pt";
-
-            document.querySelectorAll("[data-pt]").forEach(el => {
-                el.innerText = el.getAttribute("data-" + currentLang);
-            });
-
-            document.getElementById("btn-translate").innerText =
-                currentLang.toUpperCase();
-        }
-    </script>
 
     <script src="/exibicaoNova.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -131,6 +199,29 @@
         );
     </script>
 
+        <!-- SCRIPT TRADUÇÃO -->
+        <script>
+            let currentLang = "pt";
+    
+            function toggleLanguage() {
+                const botao = document.getElementById("btn-translate");
+    
+                // alterna idioma
+                currentLang = currentLang === "pt" ? "en" : "pt";
+    
+                // troca textos da página
+                document.querySelectorAll("[data-pt]").forEach(el => {
+                    el.innerText = el.getAttribute("data-" + currentLang);
+                });
+    
+                // 👇 ATUALIZA O TEXTO DO BOTÃO
+                botao.innerText = currentLang.toUpperCase();
+            }
+        </script>
+        <!-- Cole o código aqui -->
+        <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
+            PT
+        </button>
 </body>
 
 <button onclick="ativarLeitor()" id="btnLeitor">

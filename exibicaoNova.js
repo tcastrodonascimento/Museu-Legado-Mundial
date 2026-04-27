@@ -4,6 +4,7 @@ const paisesData = [
         resumo: "O único pentacampeão mundial.",
         historia: `O Brasil tem uma das histórias mais marcantes na Copa do Mundo FIFA. A seleção brasileira é a única que participou de todas as edições do torneio e também a maior campeã, com cinco títulos conquistados em 1958, 1962, 1970, 1994 e 2002. Ao longo dos anos, o Brasil revelou jogadores que se tornaram lendas do futebol mundial, como Pelé, considerado por muitos o maior jogador da história, além de Ronaldo Nazário, Ronaldinho Gaúcho e Neymar. O estilo de jogo brasileiro ficou conhecido como "futebol arte", marcado pela criatividade, habilidade e alegria em campo. Momentos históricos, como a conquista de 1970 no México, consolidaram essa identidade e encantaram o mundo.`,
         cultura: `A cultura brasileira é marcada pela diversidade resultante da mistura de povos indígenas, africanos e europeus. A influência indígena aparece na alimentação, na língua e na relação com a natureza, enquanto a africana destaca-se na música, dança e religião. Já a europeia, especialmente portuguesa, contribuiu para a língua e tradições religiosas. A música inclui estilos como samba, bossa nova e funk, com destaque para o Carnaval. A culinária apresenta pratos como feijoada, pão de queijo e acarajé. Além disso, festas populares e a diversidade regional reforçam a riqueza cultural do Brasil.ㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤㅤ`,
+        
         imgCard: "https://i.ibb.co/V0ySVJ7f/photo-1653863878915-8a0a03c1b5ac.avif",
         imgHist: "https://i.ibb.co/29sWP80/imagem-400x200.png",
         imgCult: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=800"
@@ -117,95 +118,138 @@ const paisesData = [
         imgCult: "https://images.unsplash.com/photo-1499195333224-3ce974eecfb4?q=80&w=800"
     },
     {
-        nome: "Uruguai",
-        resumo: "A Garra Charrua.",
-        historia: "Primeiro campeão do mundo e autor do Maracanazo, o Uruguai prova que o tamanho não define a grandeza.",
-        cultura: "Terra do candombe e do mate, onde a simplicidade e a resiliência são valores fundamentais.",
+        nome: { pt: "Uruguai", en: "Uruguay" },
+        resumo: { pt: "Garra Charrua.", en: "Charrúa spirit." },
+        historia: {
+            pt: "Primeiro campeão mundial em 1930 e símbolo de superação no futebol.",
+            en: "First world champion in 1930 and a symbol of resilience in football."
+        },
+        cultura: {
+            pt: "Cultura marcada pelo mate, pelo candombe e pela tradição do futebol.",
+            en: "Culture marked by mate, candombe, and strong football traditions."
+        },
         imgCard: "https://i.ibb.co/YFmC1DYs/photo-1766790458523-5bfc78de43ef.avif",
         imgHist: "https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=80&w=800",
         imgCult: "https://images.unsplash.com/photo-1590038767624-dac5740a997b?q=80&w=800"
-    },
-
+    }
 
 ];
+
+let lang = "pt";
 
 const grid = document.getElementById('gridPaises');
 const modal = document.getElementById('modalPais');
 const modalBody = document.getElementById('modalBody');
-const btnClose = document.querySelector('.close');
 
-function renderCards() {
-    grid.innerHTML = '';
-    paisesData.forEach((pais, index) => {
-        const card = document.createElement('div');
-        card.className = 'card-pais';
-        card.innerHTML = `
-            <img src="${pais.imgCard}" class="card-img" alt="${pais.nome}">
-            <div class="card-info">
-                <h3>${pais.nome}</h3>
-                <p>${pais.resumo}</p>
-            </div>
-        `;
-        card.onclick = () => openModal(index);
-        grid.appendChild(card);
+let currentIndex = null;
+
+// 🔑 traduz objetos OU data-attributes
+function t(valor) {
+    if (typeof valor === "object" && valor !== null) {
+        return valor[lang] || valor.pt || "";
+    }
+    return valor || "";
+}
+
+// 🔥 TRADUZ HTML (data-pt / data-en)
+function traduzirHTML() {
+    document.querySelectorAll("[data-pt]").forEach(el => {
+        el.innerText = el.getAttribute(`data-${lang}`);
     });
 }
 
-// ... (mantenha o array paisesData igual ao anterior) ...
-
+// ✅ RENDER CARDS
 function renderCards() {
-    const grid = document.getElementById('gridPaises');
     grid.innerHTML = '';
+
     paisesData.forEach((pais, index) => {
         const card = document.createElement('div');
         card.className = 'card-pais';
+
         card.innerHTML = `
             <div class="card-img-wrapper">
-                <img src="${pais.imgCard}" class="card-img" alt="${pais.nome}">
+                <img src="${pais.imgCard}" class="card-img" alt="${t(pais.nome)}">
             </div>
             <div class="card-info">
-                <h3>${pais.nome}</h3>
-                <p>${pais.resumo}</p>
+                <h3>${t(pais.nome)}</h3>
+                <p>${t(pais.resumo)}</p>
             </div>
         `;
+
         card.onclick = () => openModal(index);
         grid.appendChild(card);
     });
 }
 
+// ✅ MODAL
 function openModal(index) {
+    currentIndex = index;
     const p = paisesData[index];
-    const modalBody = document.getElementById('modalBody');
+
     modalBody.innerHTML = `
         <img src="${p.imgCard}" class="modal-header-img">
-        <div style="padding: 0 40px"><h2 style="font-family: 'Cinzel', serif; font-size: 3rem; color: #fff; margin-top: -50px; position: relative;">${p.nome}</h2></div>
+
+        <div style="padding: 0 40px">
+            <h2 style="font-family: 'Cinzel'; font-size: 3rem; color: #fff;">
+                ${t(p.nome)}
+            </h2>
+        </div>
+
         <div class="modal-grid">
             <div class="modal-section">
-                <h3>🏆 Tradição em Copas</h3>
-                <p style="line-height: 1.8; color: #bbb;">${p.historia}</p>
+                <h3 data-pt="🏆 Tradição em Copas" data-en="🏆 World Cup History">
+                    ${lang === "pt" ? "🏆 Tradição em Copas" : "🏆 World Cup History"}
+                </h3>
+                <p>${t(p.historia)}</p>
                 <img src="${p.imgHist}">
             </div>
+
             <div class="modal-section">
-                <h3>🌍 Essência Cultural</h3>
-                <p style="line-height: 1.8; color: #bbb;">${p.cultura}</p>
+                <h3 data-pt="🌍 Essência Cultural" data-en="🌍 Cultural Essence">
+                    ${lang === "pt" ? "🌍 Essência Cultural" : "🌍 Cultural Essence"}
+                </h3>
+                <p>${t(p.cultura)}</p>
                 <img src="${p.imgCult}">
             </div>
         </div>
     `;
-    document.getElementById('modalPais').style.display = "block";
+
+    modal.style.display = "block";
     document.body.style.overflow = "hidden";
 }
 
-// Fechar modal (mantenha os eventos de clique anteriores)
-document.querySelector('.close-btn').onclick = () => {
-    document.getElementById('modalPais').style.display = "none";
+// ✅ FECHAR MODAL
+document.querySelector('.close-btn')?.addEventListener("click", () => {
+    modal.style.display = "none";
     document.body.style.overflow = "auto";
-};
+});
+
 window.onclick = (e) => {
-    if (e.target.id === 'modalPais') {
-        document.getElementById('modalPais').style.display = "none";
+    if (e.target === modal) {
+        modal.style.display = "none";
         document.body.style.overflow = "auto";
     }
 };
 
+// 🔥 BOTÃO DE IDIOMA
+function toggleLanguage() {
+    lang = lang === "pt" ? "en" : "pt";
+
+    // muda texto do botão
+    const btn = document.getElementById("btn-translate");
+    if (btn) {
+        btn.innerText = lang === "pt" ? "EN" : "PT";
+    }
+
+    traduzirHTML();   // 🔥 traduz textos fixos
+    renderCards();    // 🔥 atualiza cards
+
+    // 🔥 atualiza modal aberto
+    if (modal.style.display === "block" && currentIndex !== null) {
+        openModal(currentIndex);
+    }
+}
+
+// iniciar
+traduzirHTML();
 renderCards();
