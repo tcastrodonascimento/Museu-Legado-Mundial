@@ -28,8 +28,7 @@ const configurarLightbox = () => {
 };
 
 // Iniciar funções ao carregar a página
-window.onload = () => {
+window.addEventListener("load", () => {
     observarScroll();
     configurarLightbox();
-};
-
+});

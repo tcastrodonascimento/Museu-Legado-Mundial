@@ -198,7 +198,10 @@
   align-items: center;
   justify-content: center;
 }
-
+[vw-access-button] {
+  z-index: 9999 !important;
+  position: fixed;
+}
 /* ==========================================================================
    5. RODAPÉ E RESPONSIVIDADE
    ========================================================================== */

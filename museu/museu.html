@@ -10,7 +10,13 @@
     <link rel="stylesheet" href="/global.css">
 </head>
 <body>
-
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+      
     <!-- NAVBAR -->
     <nav class="navbar-1">
         <div class="container d-flex justify-content-between align-items-center flex-wrap">
@@ -322,7 +328,6 @@
 
         </div>
 
-        </div>
 
         <div class="footer-bottom">
             <p data-pt="Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai"
@@ -331,17 +336,6 @@
             </p>
         </div>
     </footer>
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-    <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
-    </script>
 
     <button onclick="ativarLeitor()" id="btnLeitor">
         🔊
@@ -448,8 +442,12 @@
         <img src="" alt="Imagem Expandida" id="lightbox-img">
     </div>
 
-    <script src="/museu/museu.js"></script>
-
+    <script src="./museu.js"></script>
+    
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+      new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
