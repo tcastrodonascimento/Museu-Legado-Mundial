@@ -4,35 +4,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Eventos Interativos - Museu da Copa</title>
-    <link rel="stylesheet" href="/eventos/eventos.css">
+    <title>O Museu - Museu da Copa</title>
+    <link rel="stylesheet" href="eventos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/global.css">
 
-
 </head>
-<div vw class="enabled">
-    <div vw-access-button class="active"></div>
-    <div vw-plugin-wrapper>
-        <div class="vw-plugin-top-wrapper"></div>
-    </div>
-</div>
-
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-<script>
-    new window.VLibras.Widget('https://vlibras.gov.br/app');
-</script>
 
 <body>
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
 
     <!-- NAVBAR -->
     <nav class="navbar-1">
         <div class="container d-flex justify-content-between align-items-center flex-wrap">
+
+            <!-- LOGO -->
             <div class="logo" data-pt="Legado Mundial" data-en="World Legacy">Legado Mundial</div>
+
             <!-- BOTÃO MOBILE -->
             <button class="menu-toggle d-lg-none" data-bs-toggle="collapse" data-bs-target="#menu">
                 ☰
             </button>
+
+            <!-- MENU -->
             <ul id="menu" class="menu collapse d-lg-flex">
                 <li><a href="/home/index.html" data-pt="Início" data-en="Home">Início</a></li>
                 <li><a href="/museu/museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
@@ -44,8 +43,11 @@
                     </a>
                 </li>
             </ul>
+
         </div>
     </nav>
+
+
 
     <!-- Page Header -->
     <div class="page-header">
@@ -58,6 +60,7 @@
         </div>
     </div>
 
+    <!-- Museum Exhibits -->
     <section class="section-padding">
         <div class="container">
             <div class="grid grid-3">
@@ -235,31 +238,22 @@
         </div>
     </section>
 
-    <div class="lightbox-modal" id="lightbox">
-        <img src="" alt="Imagem Expandida" id="lightbox-img">
-    </div>
 
-    <!-- Info Section -->
+    <!-- CTA Section -->
     <section class="bg-gray" style="padding: 4rem 0;">
-        <div class="container">
-            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
-                <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1.5rem; color: #0B1120;"
-                    data-pt="INCLUÍDO NO SEU INGRESSO" data-en="INCLUDED IN YOUR TICKET">
-                    INCLUÍDO NO SEU INGRESSO
-                </h2>
-                <p style="font-size: 1.1rem; color: #4b5563; line-height: 1.8; margin-bottom: 1.5rem;"
-                    data-pt="Todas estas experiências interativas estão incluídas no ingresso padrão. Visitantes VIP têm acesso prioritário e sessões exclusivas com duração estendida."
-                    data-en="All these interactive experiences are included in the standard ticket. VIP visitors have priority access and exclusive extended sessions.">
-                    Todas estas experiências interativas estão incluídas no ingresso padrão.
-                </p>
-                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="/ingresso/ingresso.html" class="btn btn-gold" data-pt="Garantir Ingresso"
-                        data-en="Get Ticket">Garantir Ingresso</a>
-
-                    <a href="/museu/museu.html" class="btn btn-red" data-pt="Conhecer o Museu"
-                        data-en="Explore the Museum">Conhecer o Museu</a>
-                </div>
-            </div>
+        <div class="container text-center">
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom: 1rem; color: #0B1120;"
+                data-pt="PRONTO PARA ESTA EXPERIÊNCIA?" data-en="READY FOR THIS EXPERIENCE?">
+                PRONTO PARA ESTA EXPERIÊNCIA?
+            </h2>
+            <p style="font-size: 1.1rem; color: #806b6b; margin-bottom: 2rem;"
+                data-pt="Garanta seu ingresso e visite o maior museu da Copa do Mundo"
+                data-en="Guarantee your ticket and visit the largest World Cup museum">
+                Garanta seu ingresso e visite o maior museu da Copa do Mundo
+            </p>
+            <a href="/ingresso/ingresso.html" class="btn btn-gold" data-pt="Comprar Ingresso" data-en="Buy Ticket">
+                Comprar Ingresso
+            </a>
         </div>
     </section>
     <!-- FOOTER -->
@@ -311,14 +305,14 @@
 
         </div>
 
+
         <div class="footer-bottom">
             <p data-pt="Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai"
-               data-en="Developed by @Mariajobs and sponsored by Adilson Bonsai">
+                data-en="Developed by @Mariajobs and sponsored by Adilson Bonsai">
                 Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai
             </p>
         </div>
     </footer>
-
 
     <button onclick="ativarLeitor()" id="btnLeitor">
         🔊
@@ -420,8 +414,17 @@
     </button>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/eventos/eventos.js"></script>
 
+    <div class="lightbox-modal" id="lightbox" onclick="this.classList.remove('open')">
+        <img src="" alt="Imagem Expandida" id="lightbox-img">
+    </div>
+
+    <script src="./eventos.js"></script>
+
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
 </body>
 
 </html>
