@@ -162,3 +162,21 @@ body {
 main {
   flex: 1; /* empurra o footer pra baixo */
 }
+
+figure {
+    margin: 0;
+    text-align: center;
+}
+
+.icone-ingresso {
+    width: 200px; /* ajuste o tamanho conforme desejar */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+figcaption {
+    margin-top: 5px;
+    font-weight: bold;
+    font-size: 1rem;
+}

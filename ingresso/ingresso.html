@@ -56,23 +56,33 @@
         <h1 data-pt="Comprar Ingressos" data-en="Buy Tickets">Comprar Ingressos</h1>
      </section>
 
- <div class="tickets">
-        <div class="ticket-card">
-            <h2 data-pt="Inteira" data-en="Standard">Inteira</h2>
-            <p>R$ 70</p>
-            <button onclick="abrirPagamento('Inteira', 70)" data-pt="Comprar" data-en="Buy Now">Comprar</button>
-        </div>
-        <div class="ticket-card">
-            <h2 data-pt="Meia" data-en="Half Price">Meia</h2>
-            <p>R$ 35</p>
-            <button onclick="abrirPagamento('Meia', 35)" data-pt="Comprar" data-en="Buy Now">Comprar</button>
-        </div>
-        <div class="ticket-card">
-            <h2 data-pt="VIP" data-en="VIP Pass">VIP</h2>
-            <p>R$ 120</p>
-            <button onclick="abrirPagamento('VIP', 120)" data-pt="Comprar" data-en="Buy Now">Comprar</button>
-        </div>
+<div class="tickets">
+    <div class="ticket-card">
+        <figure>
+            <img src="img/inteira.png" alt="Ingresso Inteira" class="icone-ingresso">
+            <figcaption>Inteira</figcaption>
+        </figure>
+        <p>R$ 70</p>
+        <button onclick="abrirPagamento('Inteira', 70)" data-pt="Comprar" data-en="Buy Now">Comprar</button>
     </div>
+    <div class="ticket-card">
+        <figure>
+            <img src="img/meia.png" alt="Ingresso Meia" class="icone-ingresso">
+            <figcaption>Meia</figcaption>
+        </figure>
+        <p>R$ 35</p>
+        <button onclick="abrirPagamento('Meia', 35)" data-pt="Comprar" data-en="Buy Now">Comprar</button>
+    </div>
+    <div class="ticket-card">
+        <figure>
+            <img src="img/vip.png" alt="Ingresso VIP" class="icone-ingresso">
+            <figcaption>VIP</figcaption>
+        </figure>
+        <p>R$ 120</p>
+        <button onclick="abrirPagamento('VIP', 120)" data-pt="Comprar" data-en="Buy Now">Comprar</button>
+    </div>
+</div>
+
 
 
  <!-- MODAL -->
