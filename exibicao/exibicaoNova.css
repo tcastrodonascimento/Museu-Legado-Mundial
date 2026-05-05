@@ -167,41 +167,6 @@
 .bg-gray {
   background-color: #fbf9f9;
 }
-
-.translate-btn {
-  position: fixed;
-  top: 120px;
-  right: 20px;
-  z-index: 2000;
-  background: linear-gradient(135deg, #facc15, #fbbf24);
-  border: none;
-  padding: 12px 18px;
-  border-radius: 10px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-}
-
-#btnLeitor {
-  position: fixed;
-  bottom: 305px;
-  right: 10px;
-  background-color: #e53935;
-  color: white;
-  border: none;
-  width: 40px;
-  height: 40px;
-  border-radius: 8px;
-  z-index: 9999;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-[vw-access-button] {
-  z-index: 9999 !important;
-  position: fixed;
-}
 /* ==========================================================================
    5. RODAPÉ E RESPONSIVIDADE
    ========================================================================== */
