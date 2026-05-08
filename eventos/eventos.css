@@ -57,14 +57,14 @@
   background-color: #f3f4f6;
 }
 
-.card-img {
+.card-icon-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
 
-.card:hover .card-img {
+.card:hover .card-icon-img {
   transform: scale(1.1);
 }
 

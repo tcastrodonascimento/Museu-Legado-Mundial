@@ -167,6 +167,7 @@
 .bg-gray {
   background-color: #fbf9f9;
 }
+
 /* ==========================================================================
    5. RODAPÉ E RESPONSIVIDADE
    ========================================================================== */
@@ -207,66 +208,89 @@ footer {
 
 /* Estado inicial: invisível e um pouco abaixo */
 .detalhe-bloco {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
 }
 
 /* Estado ativo: quando o scroll chega nele */
 .detalhe-bloco.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --- LIGHTBOX (IMAGEM EXPANDIDA) --- */
 
 .lightbox-modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo um pouco mais escuro para destacar */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    cursor: zoom-out;
-    align-items: center;
-    justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Fundo um pouco mais escuro para destacar */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightbox-modal img {
-    /* Força a largura a chegar perto do limite da tela */
-    width: 90vw !important; 
-    height: 90vh !important;
-    
-    /* Mantém a proporção sem achatar */
-    object-fit: contain !important; 
-    
-    max-width: none !important;
-    max-height: none !important;
-    
-    border-radius: 8px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.6);
-    
-    animation: zoomIn 0.4s ease-out;
+  /* Força a largura a chegar perto do limite da tela */
+  width: 90vw !important;
+  height: 90vh !important;
+
+  /* Mantém a proporção sem achatar */
+  object-fit: contain !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+
+  animation: zoomIn 0.4s ease-out;
 }
+
 .lightbox-modal.open {
-    display: flex;
+  display: flex;
 }
 
 .lightbox-modal.open img {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 @keyframes zoomIn {
-    from { 
-        transform: scale(0.7); 
-        opacity: 0; 
-    }
-    to { 
-        transform: scale(1); 
-        opacity: 1; 
-    }
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 1. Remove o sublinhado de todos os links que envolvem os cards */
+a {
+  text-decoration: none !important;
+  /* Remove a linha debaixo */
+  color: inherit;
+  /* Mantém a cor original do texto do card */
+  display: block;
+  /* Garante que o card inteiro aceite o clique */
+}
+
+/* 2. Garante que o scroll seja suave em toda a página */
+html {
+  scroll-behavior: smooth !important;
+}
+
+/* 3. Evita que o conteúdo pare "colado" no topo da tela */
+.detalhe-bloco {
+  scroll-margin-top: 100px;
 }

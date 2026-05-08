@@ -59,7 +59,7 @@ h1, h2, h3 {
 }
 
 .btn-red {
-  background: #d4a832;
+  background: #d43232;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -212,8 +212,8 @@ footer {
 }
 .translate-button {
     position: fixed;
-    bottom: 30px;
-    right: 30px;
+    bottom: 130px;
+    right: 10px;
     z-index: 9999;
     background-color: #0B1120;
     border: none;
@@ -247,8 +247,8 @@ footer {
 
     #btnLeitor {
     position: fixed;
-    bottom: 90px;
-    right: 30px;
+    bottom: 200px;
+    right: 10px;
     z-index: 9999;
     background-color: #0B1120;
     border: none;
