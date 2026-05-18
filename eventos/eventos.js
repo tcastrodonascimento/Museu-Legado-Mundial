@@ -1,47 +1,49 @@
-// Função para configurar o Lightbox (Abrir foto ao clicar)
-const configurarLightbox = () => {
-    const imagens = document.querySelectorAll('.foto-item img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+function adicionarAnimacoes() {
+    const elementos = document.querySelectorAll(
+        ".page-header h1, .page-header p, .card, .detalhe-bloco, .foto-item, .bg-gray h2, .bg-gray p, .bg-gray a"
+    );
 
-    // Verifica se os elementos existem para não dar erro no console
-    if (!lightbox || !lightboxImg) return;
-
-    imagens.forEach(img => {
-        img.addEventListener('click', () => {
-            // 1. Pega o caminho da imagem clicada e coloca no modal
-            lightboxImg.src = img.src;
-            // 2. Mostra o modal (o CSS precisa da classe .open)
-            lightbox.classList.add('open');
-            // 3. Trava o scroll da página ao fundo
-            document.body.style.overflow = 'hidden';
-        });
+    elementos.forEach((elemento) => {
+        elemento.classList.add("animar");
     });
 
-    // Fecha o lightbox ao clicar em qualquer lugar do fundo preto
-    lightbox.addEventListener('click', () => {
-        lightbox.classList.remove('open');
-        // Devolve o scroll da página
-        document.body.style.overflow = 'auto';
-    });
-};
-
-// Função para animação de subida (Scroll)
-const observarScroll = () => {
-    const blocos = document.querySelectorAll('.detalhe-bloco');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+    const observador = new IntersectionObserver((itens) => {
+        itens.forEach((item) => {
+            if (item.isIntersecting) {
+                item.target.classList.add("apareceu");
             }
         });
-    }, { threshold: 0.1 });
+    }, {
+        threshold: 0.15
+    });
 
-    blocos.forEach(bloco => observer.observe(bloco));
-};
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+}
 
-// Inicializa tudo quando a página carregar
-window.addEventListener('DOMContentLoaded', () => {
-    observarScroll();
+function configurarLightbox() {
+    const imagens = document.querySelectorAll(".foto-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    if (!lightbox || !lightboxImg) return;
+
+    imagens.forEach((imagem) => {
+        imagem.addEventListener("click", () => {
+            lightboxImg.src = imagem.src;
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
+        });
+    });
+
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "auto";
+    });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    adicionarAnimacoes();
     configurarLightbox();
 });

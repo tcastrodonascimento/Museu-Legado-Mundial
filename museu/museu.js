@@ -1,34 +1,88 @@
-// 1. Animação de Scroll (Revelação)
-const observarScroll = () => {
-    const blocos = document.querySelectorAll('.detalhe-bloco');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, { threshold: 0.1 }); // Ativa quando 10% do bloco aparece
+// ===============================
+// ANIMAÇÕES DA PÁGINA
+// ===============================
 
-    blocos.forEach(bloco => observer.observe(bloco));
-};
+function adicionarAnimacoes() {
 
-// 2. Função de Abrir Foto (Lightbox)
-const configurarLightbox = () => {
-    const imagens = document.querySelectorAll('.foto-item img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+    // Pega os elementos que vão receber animação
+    const elementos = document.querySelectorAll(
+        ".page-header h1, .page-header p, .card, .detalhe-bloco, .foto-item, .bg-gray h2, .bg-gray p, .bg-gray a"
+    );
 
-    imagens.forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src; // Copia o caminho da foto clicada
-            lightbox.classList.add('open'); // Abre o modal
-        });
+    // Adiciona a classe de animação em todos
+    elementos.forEach((elemento) => {
+        elemento.classList.add("animar");
     });
-};
 
-// Iniciar funções ao carregar a página
+    // Observa quando o elemento aparece na tela
+    const observador = new IntersectionObserver((itens) => {
+
+        itens.forEach((item) => {
+
+            if (item.isIntersecting) {
+                item.target.classList.add("apareceu");
+            }
+
+        });
+
+    }, {
+        threshold: 0.15
+    });
+
+    // Coloca todos os elementos no observador
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+}
+
+
+// ===============================
+// ESTILO DO TÍTULO
+// ===============================
+
+function estilizarTitulos() {
+
+    const tituloPrincipal = document.querySelector(".titulo-museu");
+
+    if (tituloPrincipal) {
+        tituloPrincipal.classList.add("titulo-dourado");
+    }
+
+}
+
+
+// ===============================
+// LIGHTBOX DAS IMAGENS
+// ===============================
+
+function configurarLightbox() {
+
+    const imagens = document.querySelectorAll(".foto-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+
+    imagens.forEach((imagem) => {
+
+        imagem.addEventListener("click", () => {
+
+            lightboxImg.src = imagem.src;
+            lightbox.classList.add("open");
+
+        });
+
+    });
+
+}
+
+
+// ===============================
+// INICIAR TUDO
+// ===============================
+
 window.addEventListener("load", () => {
-    observarScroll();
+
+    adicionarAnimacoes();
+    estilizarTitulos();
     configurarLightbox();
+
 });

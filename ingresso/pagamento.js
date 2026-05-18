@@ -103,3 +103,31 @@ function finalizarCompra() {
             console.log(error);
         });
 }
+
+function adicionarAnimacoes() {
+    const elementos = document.querySelectorAll(
+        ".hero-section h1, .ticket-card, footer"
+    );
+
+    elementos.forEach((elemento) => {
+        elemento.classList.add("animar");
+    });
+
+    const observador = new IntersectionObserver((itens) => {
+        itens.forEach((item) => {
+            if (item.isIntersecting) {
+                item.target.classList.add("apareceu");
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    adicionarAnimacoes();
+});

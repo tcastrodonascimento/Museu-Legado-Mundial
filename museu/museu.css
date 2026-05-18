@@ -167,6 +167,7 @@
 .bg-gray {
   background-color: #fbf9f9;
 }
+
 /* ==========================================================================
    5. RODAPÉ E RESPONSIVIDADE
    ========================================================================== */
@@ -207,66 +208,220 @@ footer {
 
 /* Estado inicial: invisível e um pouco abaixo */
 .detalhe-bloco {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease-out;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
 }
 
 /* Estado ativo: quando o scroll chega nele */
 .detalhe-bloco.active {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* --- LIGHTBOX (IMAGEM EXPANDIDA) --- */
 
 .lightbox-modal {
-    display: none;
-    position: fixed;
-    z-index: 10000;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.9); /* Fundo um pouco mais escuro para destacar */
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    cursor: zoom-out;
-    align-items: center;
-    justify-content: center;
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Fundo um pouco mais escuro para destacar */
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  cursor: zoom-out;
+  align-items: center;
+  justify-content: center;
 }
 
 .lightbox-modal img {
-    /* Força a largura a chegar perto do limite da tela */
-    width: 90vw !important; 
-    height: 90vh !important;
-    
-    /* Mantém a proporção sem achatar */
-    object-fit: contain !important; 
-    
-    max-width: none !important;
-    max-height: none !important;
-    
-    border-radius: 8px;
-    box-shadow: 0 0 50px rgba(0,0,0,0.6);
-    
-    animation: zoomIn 0.4s ease-out;
+  /* Força a largura a chegar perto do limite da tela */
+  width: 90vw !important;
+  height: 90vh !important;
+
+  /* Mantém a proporção sem achatar */
+  object-fit: contain !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  border-radius: 8px;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.6);
+
+  animation: zoomIn 0.4s ease-out;
 }
+
 .lightbox-modal.open {
-    display: flex;
+  display: flex;
 }
 
 .lightbox-modal.open img {
-    transform: scale(1);
+  transform: scale(1);
 }
 
 @keyframes zoomIn {
-    from { 
-        transform: scale(0.7); 
-        opacity: 0; 
-    }
-    to { 
-        transform: scale(1); 
-        opacity: 1; 
-    }
+  from {
+    transform: scale(0.7);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
+
+/* ===================================================
+   ANIMAÇÕES IGUAIS / PARECIDAS COM A HOME
+   Cole no final do museu.css
+=================================================== */
+
+/* Fonte de título parecida com a home */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+/* Título grande estilo home */
+.titulo-museu,
+.detalhe-cabecalho h2,
+.bg-gray h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* Título principal da página */
+.titulo-museu {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  color: #d4a832;
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-museu::after {
+  content: "";
+
+  width: 120px;
+  height: 4px;
+
+  background: linear-gradient(
+      90deg,
+      transparent,
+      #d4a832,
+      transparent
+  );
+
+  display: block;
+
+  margin: 20px auto 0;
+
+  border-radius: 999px;
+} 
+
+/* Subtítulo do topo */
+.page-header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 1rem auto 0;
+}
+
+/* Deixa o topo mais parecido com a home */
+.page-header {
+  padding: 7rem 0 5rem;
+  background: linear-gradient(180deg, #05070d, #0b1120);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Brilho dourado no fundo */
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(212, 168, 50, 0.18), transparent 60%);
+  pointer-events: none;
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Texto dourado com degradê */
+.titulo-dourado {
+  background: linear-gradient(135deg, #d4a832, #ffd45c);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* Animação inicial */
+.animar {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: 0.9s ease;
+}
+
+/* Quando aparecer na tela */
+.animar.apareceu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animação dos cards */
+.card.animar {
+  transform: translateY(45px) scale(0.96);
+}
+
+.card.animar.apareceu {
+  transform: translateY(0) scale(1);
+}
+
+/* Deixa os cards com efeito mais parecido com a home */
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+}
+
+/* Animação das imagens da galeria */
+.foto-item.animar {
+  transform: translateY(45px) scale(0.96);
+}
+
+.foto-item.animar.apareceu {
+  transform: translateY(0) scale(1);
+}
+
+/* Linha dourada mais elegante */
+.linha-decorativa {
+  background: linear-gradient(135deg, #d4a832, #ffd45c);
+}
+
+/* Botão estilo home */
+.btn-gold {
+  background: linear-gradient(135deg, #d4a832, #ffd45c) !important;
+  color: #111 !important;
+  border: none !important;
+  box-shadow: 0 20px 50px rgba(212, 168, 50, 0.25);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 60px rgba(212, 168, 50, 0.4);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .page-header {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .titulo-museu {
+    font-size: 3.5rem;
+  }
+} 

@@ -294,3 +294,132 @@ html {
 .detalhe-bloco {
   scroll-margin-top: 100px;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,500;1,500&display=swap');
+
+.page-header {
+  padding: 7rem 0 5rem;
+  background: linear-gradient(180deg, #05070d, #0b1120);
+  position: relative;
+  overflow: hidden;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle, rgba(212, 168, 50, 0.18), transparent 60%);
+}
+
+.page-header .container {
+  position: relative;
+  z-index: 2;
+}
+
+.titulo-museu,
+.page-header h1,
+.detalhe-cabecalho h2,
+.bg-gray h2 {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.titulo-museu,
+.page-header h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  background: linear-gradient(135deg, #d4a832, #ffd45c);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 4px 25px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-museu::after {
+  content: "";
+
+  width: 120px;
+  height: 4px;
+
+  background: linear-gradient(
+      90deg,
+      transparent,
+      #d4a832,
+      transparent
+  );
+
+  display: block;
+
+  margin: 20px auto 0;
+
+  border-radius: 999px;
+}
+
+.page-header p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 1rem auto 0;
+}
+
+.animar {
+  opacity: 0;
+  transform: translateY(45px);
+  transition: 0.9s ease;
+}
+
+.animar.apareceu {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card.animar {
+  transform: translateY(45px) scale(0.96);
+}
+
+.card.animar.apareceu {
+  transform: translateY(0) scale(1);
+}
+
+.card {
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.18);
+}
+
+.foto-item.animar {
+  transform: translateY(45px) scale(0.96);
+}
+
+.foto-item.animar.apareceu {
+  transform: translateY(0) scale(1);
+}
+
+.linha-decorativa {
+  background: linear-gradient(135deg, #d4a832, #ffd45c);
+}
+
+.btn-gold {
+  background: linear-gradient(135deg, #d4a832, #ffd45c) !important;
+  color: #111 !important;
+  border: none !important;
+  box-shadow: 0 20px 50px rgba(212, 168, 50, 0.25);
+}
+
+.btn-gold:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 25px 60px rgba(212, 168, 50, 0.4);
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    padding: 5rem 1rem 3rem;
+  }
+
+  .titulo-museu,
+  .page-header h1 {
+    font-size: 3.5rem;
+  }
+}

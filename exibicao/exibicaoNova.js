@@ -1,34 +1,49 @@
-// 1. Animação de Scroll (Revelação)
-const observarScroll = () => {
-    const blocos = document.querySelectorAll('.detalhe-bloco');
-    
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
+function adicionarAnimacoes() {
+    const elementos = document.querySelectorAll(
+        ".page-header h1, .page-header p, .card, .detalhe-bloco, .foto-item, .bg-gray h2, .bg-gray p, .bg-gray a"
+    );
+
+    elementos.forEach((elemento) => {
+        elemento.classList.add("animar");
+    });
+
+    const observador = new IntersectionObserver((itens) => {
+        itens.forEach((item) => {
+            if (item.isIntersecting) {
+                item.target.classList.add("apareceu");
             }
         });
-    }, { threshold: 0.1 }); // Ativa quando 10% do bloco aparece
+    }, {
+        threshold: 0.15
+    });
 
-    blocos.forEach(bloco => observer.observe(bloco));
-};
+    elementos.forEach((elemento) => {
+        observador.observe(elemento);
+    });
+}
 
-// 2. Função de Abrir Foto (Lightbox)
-const configurarLightbox = () => {
-    const imagens = document.querySelectorAll('.foto-item img');
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
+function configurarLightbox() {
+    const imagens = document.querySelectorAll(".foto-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
 
-    imagens.forEach(img => {
-        img.addEventListener('click', () => {
-            lightboxImg.src = img.src; // Copia o caminho da foto clicada
-            lightbox.classList.add('open'); // Abre o modal
+    if (!lightbox || !lightboxImg) return;
+
+    imagens.forEach((imagem) => {
+        imagem.addEventListener("click", () => {
+            lightboxImg.src = imagem.src;
+            lightbox.classList.add("open");
+            document.body.style.overflow = "hidden";
         });
     });
-};
 
-// Iniciar funções ao carregar a página
-window.addEventListener("load", () => {
-    observarScroll();
+    lightbox.addEventListener("click", () => {
+        lightbox.classList.remove("open");
+        document.body.style.overflow = "auto";
+    });
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    adicionarAnimacoes();
     configurarLightbox();
 });
