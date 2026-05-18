@@ -51,10 +51,10 @@
                 ☰
             </button>
             <ul id="menu" class="menu collapse d-lg-flex">
-                <li><a href="/home/index.html" data-pt="Início" data-en="Home">Início</a></li>
+                <li><a href="index.html" data-pt="Início" data-en="Home">Início</a></li>
                 <li><a href="/museu/museu.html" data-pt="Museu" data-en="Museum">Museu</a></li>
                 <li><a href="/eventos/eventos.html" data-pt="Eventos" data-en="Events">Eventos</a></li>
-                <li><a href="/exibicao/exibicaoNova.html" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
+                <li><a href="/exibicao/exibicaoNova.css" data-pt="Exibição" data-en="Exhibition">Exibição</a></li>
                 <li>
                     <a href="/ingresso/ingresso.html">
                         <button class="btn btn-red" data-pt="Ingressos" data-en="Tickets">Ingressos</button>
@@ -64,191 +64,198 @@
         </div>
     </nav>
 
-
     <!-- HERO -->
-    <section class="hero-section">
-        <div class="container text-white text-center">
-            <h1 class="display-3 fw-bold" data-pt="O SANGUE O SUORA GLÓRIA" data-en="THE BLOOD THE SWEAT THE GLORY">
-                O SANGUE O SUOR A GLÓRIA
-            </h1>
-            <p class="lead mb-4" data-pt="Viva a história das copas do mundo em uma experiência interativa."
-                data-en="Live the history of the world cups in an interactive experience.">
-                Viva a história das copas do mundo em uma experiência interativa.
+    <section class="hero">
+        <!-- FUNDO -->
+        <div class="hero-bg" id="hero-bg"></div>
+        <!-- ESCURECER FUNDO -->
+        <div class="hero-overlay"></div>
+        <!-- CONTEÚDO -->
+        <div class="container-luxe hero-content">
+            <!-- TEXTO PEQUENO -->
+            <p class="eyebrow">
+                FIFA World Cup Museum · 2026
             </p>
-            <a href="/ingresso/ingresso.html" class="btn btn-warning btn-lg fw-bold px-5" data-pt="Garantir Ingresso"
-                data-en="Get Tickets">
-                Garantir Ingresso
-            </a>
-        </div>
-    </section>
-
-    <!-- BANNER -->
-    <section class="banner-container">
-        <div id="drag-container">
-            <div id="spin-container">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-                <img src="/home/img/taça 2026.png" alt="Copa 2026">
-            </div>
-            <div id="ground"></div>
-        </div>
-    </section>
-
-    <!-- DESTAQUES -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="grid grid-3">
-
-                <a href="/museu/museu.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container">
-                            <img src="img/sala de trofeus1.png" alt="Troféu da Copa do Mundo" class="card-img">
-                        </div>
-                        <h3 data-pt="Sala dos Troféus" data-en="Trophy Room">Sala dos Troféus</h3>
-                        <p data-pt="Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações."
-                            data-en="Admire official replicas of World Cup trophies and historic trophies that marked generations.">
-                            Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram
-                            gerações.
-                        </p>
-                    </div>
+            <!-- TITULO -->
+            <h1 class="hero-title">
+                O SANGUE <br>
+                O SUOR <br>
+                <span class="text-gradient-gold">
+                    A glória
+                </span>
+            </h1>
+            <!-- TEXO -->
+            <p class="hero-sub">
+                Atravesse 96 anos de Copas do Mundo em uma experiência imersiva.
+            </p>
+            <!-- BOTÕES -->
+            <div class="hero-cta">
+                <!-- BOTÃO 1 -->
+                <a href="/ingresso/ingresso.html" class="btn-gold">
+                    Garantir Ingresso →
                 </a>
-
-                <a href="/museu/museu.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container">
-                            <img src="img/camisas lendarias1.png" alt="Camisas Históricas" class="card-img">
-                        </div>
-                        <h3 data-pt="Camisas Lendárias" data-en="Legendary Jerseys">Camisas Lendárias</h3>
-                        <p data-pt="Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da história."
-                            data-en="A unique collection of original uniforms and authentic replicas worn by the greatest players in history.">
-                            Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores
-                            jogadores da história.
-                        </p>
-                    </div>
+                <!-- BOTÃO 2 -->
+                <a href="/exibicao/exibicaoNova.html" class="btn-outline-gold">
+                    Explorar Galeria
                 </a>
-
-                <a href="/museu/museu.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container">
-                            <img src="img/salão das lendas1.png" alt="Salão das Lendas" class="card-img">
-                        </div>
-                        <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">Salão das Lendas</h3>
-                        <p data-pt="Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais."
-                            data-en="Discover the stories of the greatest players through interactive panels, historical videos, and personal objects.">
-                            Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos
-                            e objetos pessoais.
-                        </p>
-                    </div>
-                </a>
-
-                <a href="/eventos/eventos.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/sala de trofeus1.png" class="card-img"></div>
-                        <h3 data-pt="Sala dos Troféus" data-en="Trophy Room">Sala dos Troféus</h3>
-                        <p data-pt="Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações."
-                            data-en="Admire official replicas of World Cup trophies and historic trophies that marked generations.">
-                            Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram
-                            gerações.</p>
-                    </div>
-                </a>
-
-                <a href="/eventos/eventos.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/sala de trofeus1.png" class="card-img"></div>
-                        <h3 data-pt="Camisas Lendárias" data-en="Legendary Jerseys">Camisas Lendárias</h3>
-                        <p data-pt="Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da história."
-                            data-en="A unique collection of original uniforms and authentic replicas worn by the greatest players in history.">
-                            Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores
-                            jogadores da história.</p>
-                    </div>
-                </a>
-
-                <a href="/eventos/eventos.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/salão das lendas1.png" class="card-img"></div>
-                        <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">Salão das Lendas</h3>
-                        <p data-pt="Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais."
-                            data-en="Discover the stories of the greatest players through interactive panels, historical videos, and personal objects.">
-                            Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos
-                            e objetos pessoais.</p>
-                    </div>
-                </a>
-
-                <a href="/exibicao/exibicaoNova.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/sala de trofeus1.png" class="card-img"></div>
-                        <h3 data-pt="Sala dos Troféus" data-en="Trophy Room">Sala dos Troféus</h3>
-                        <p data-pt="Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações."
-                            data-en="Admire official replicas of World Cup trophies and historic trophies that marked generations.">
-                            Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram
-                            gerações.</p>
-                    </div>
-                </a>
-
-                <a href="/exibicao/exibicaoNova.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/sala de trofeus1.png" class="card-img"></div>
-                        <h3 data-pt="Camisas Lendárias" data-en="Legendary Jerseys">Camisas Lendárias</h3>
-                        <p data-pt="Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da história."
-                            data-en="A unique collection of original uniforms and authentic replicas worn by the greatest players in history.">
-                            Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores
-                            jogadores da história.</p>
-                    </div>
-                </a>
-
-                <a href="/exibicao/exibicaoNova.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/salão das lendas1.png" class="card-img"></div>
-                        <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">Salão das Lendas</h3>
-                        <p data-pt="Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais."
-                            data-en="Discover the stories of the greatest players through interactive panels, historical videos, and personal objects.">
-                            Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos
-                            e objetos pessoais.</p>
-                    </div>
-                </a>
-
-                <a href="museu.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/sala de trofeus1.png" class="card-img"></div>
-                        <h3 data-pt="Sala dos Troféus" data-en="Trophy Room">Sala dos Troféus</h3>
-                        <p data-pt="Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram gerações."
-                            data-en="Admire official replicas of World Cup trophies and historic trophies that marked generations.">
-                            Admire réplicas oficiais das taças da Copa do Mundo e troféus históricos que marcaram
-                            gerações.</p>
-                    </div>
-                </a>
-
-                <a href="museu.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/sala de trofeus1.png" class="card-img"></div>
-                        <h3 data-pt="Camisas Lendárias" data-en="Legendary Jerseys">Camisas Lendárias</h3>
-                        <p data-pt="Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores jogadores da história."
-                            data-en="A unique collection of original uniforms and authentic replicas worn by the greatest players in history.">
-                            Uma coleção única de uniformes originais e réplicas autênticas usados pelos maiores
-                            jogadores da história.</p>
-                    </div>
-                </a>
-
-                <a href="museu.html" class="card-link">
-                    <div class="card">
-                        <div class="card-image-container"><img src="img/salão das lendas1.png" class="card-img"></div>
-                        <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">Salão das Lendas</h3>
-                        <p data-pt="Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais."
-                            data-en="Discover the stories of the greatest players through interactive panels, historical videos, and personal objects.">
-                            Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos
-                            e objetos pessoais.</p>
-                    </div>
-                </a>
-
             </div>
         </div>
     </section>
 
+
+
+
+    <!-- ÁREA DAS TAÇAS -->
+    <section class="trophy-section">
+        <!-- EFEITO DOURADO -->
+        <div class="trophy-bg-gold"></div>
+        <!-- TITULO -->
+        <div class="container-luxe reveal" style="text-align:center;margin-bottom:3rem;">
+            <p class="eyebrow">
+                Símbolo Eterno
+            </p>
+            <h2 class="big-display">
+                A TAÇA QUE
+                <span class="text-gradient-gold">
+                    MOVE O MUNDO
+                </span>
+            </h2>
+        </div>
+
+        <!-- CARROSSEL -->
+        <div class="carousel-stage">
+            <!-- IMAGENS DAS TAÇAS -->
+            <div class="carousel-spin" id="carousel-spin">
+            </div>
+            <!-- CHÃO -->
+            <div class="carousel-ground"></div>
+        </div>
+    </section>
+
+    <section class="highlights">
+        <div class="container-luxe">
+            <!-- TITULO -->
+            <div class="reveal" style="text-align:center;margin-bottom:5rem">
+                <p class="eyebrow">
+                    Destaques do Museu
+                </p>
+                <h2 class="big-display" style="margin-top:1rem">
+                    ARTEFATOS
+                    <span class="font-editorial text-gradient-gold">
+                        lendários
+                    </span>
+                </h2>
+                <div class="gold-divider" style="margin-top:2rem"></div>
+            </div>
+
+            <!-- GRID DOS CARDS -->
+            <div class="highlights-grid">
+                <!-- CARD 1 -->
+                <article class="card-luxe highlight reveal">
+                    <div class="highlight-img">
+                        <img src="img/sala de trofeus1.png" alt="Sala dos Troféus">
+                        <div class="highlight-grad"></div>
+                    </div>
+                    <div class="highlight-body">
+                        <h3>Sala dos Troféus</h3>
+                        <p>
+                            Réplicas oficiais e o brilho de cada taça erguida desde 1930.
+                        </p>
+                        <!-- BOTÃO -->
+                        <a href="/museu/museu.html" class="highlight-cta">
+                            Conhecer →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CARD 2 -->
+                <article class="card-luxe highlight reveal">
+                    <div class="highlight-img">
+                        <img src="img/camisas lendarias1.png" alt="Camisas Históricas">
+                        <div class="highlight-grad"></div>
+                    </div>
+                    <div class="highlight-body">
+                        <h3>Camisas Históricas</h3>
+                        <p>
+                            Uniformes lendários de 1930 até 2026.
+                        </p>
+                        <!-- BOTÃO -->
+                        <a href="/museu/museu.html" class="highlight-cta">
+                            Conhecer →
+                        </a>
+                    </div>
+                </article>
+
+                <!-- CARD 3 -->
+                <article class="card-luxe highlight reveal">
+                    <div class="highlight-img">
+                        <img src="img/lendas01.png" alt="Salão das Lendas">
+                        <div class="highlight-grad"></div>
+                    </div>
+                    <div class="highlight-body">
+                        <h3>Salão das Lendas</h3>
+                        <p>
+                            Histórias dos maiores jogadores da história.
+                        </p>
+                        <!-- BOTÃO -->
+                        <a href="/museu/museu.html" class="highlight-cta">
+                            Conhecer →
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <section class="stats">
+        <div class="stats-bg"></div>
+        <div class="stats-overlay"></div>
+        <div class="container-luxe stats-grid">
+            <div class="reveal">
+                <div class="stat-num text-gradient-gold">96</div>
+                <p data-i18n-pt="Anos de história" data-i18n-en="Years of history">Anos de história</p>
+            </div>
+            <div class="reveal" data-delay="80">
+                <div class="stat-num text-gradient-gold">22</div>
+                <p data-i18n-pt="Edições" data-i18n-en="Editions">Edições</p>
+            </div>
+            <div class="reveal" data-delay="160">
+                <div class="stat-num text-gradient-gold">+2K</div>
+                <p data-i18n-pt="Artefatos" data-i18n-en="Artifacts">Artefatos</p>
+            </div>
+            <div class="reveal" data-delay="240">
+                <div class="stat-num text-gradient-gold">8</div>
+                <p data-i18n-pt="Países campeões" data-i18n-en="Champion nations">Países campeões</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-final">
+        <div class="container-luxe">
+            <div class="reveal card-luxe cta-card">
+                <div class="cta-glow"></div>
+                <div class="cta-inner">
+                    <p class="eyebrow" data-i18n-pt="Sua jornada começa aqui" data-i18n-en="Your journey begins here">
+                        Sua jornada começa aqui</p>
+                    <h2 class="cta-title">
+                        <span data-i18n-pt="VENHA VIVER A HISTÓRIA, " data-i18n-en="COME LIVE THE HISTORY, ">VENHA VIVER
+                            A HISTÓRIA, </span>
+                        <span class="text-gradient-gold font-editorial" style="font-style:italic"
+                            data-i18n-pt="não apenas vê-la." data-i18n-en="don't just watch it.">não apenas
+                            vê-la.</span>
+                    </h2>
+                    <a href="/ingresso/ingresso.html" class="btn-gold"><span data-i18n-pt="Reservar Visita"
+                            data-i18n-en="Book Your Visit">Reservar Visita</span><svg viewBox="0 0 24 24" width="16"
+                            height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round">
+                            <line x1="5" y1="12" x2="19" y2="12" />
+                            <polyline points="12 5 19 12 12 19" />
+                        </svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- CONTEÚDO COPIADO DOS 5 PRIMEIROS ARQUIVOS: fim -->
     <!-- FOOTER -->
     <footer class="footer">
         <div class="container footer-content">
@@ -283,7 +290,7 @@
                 <a href="/rodape/acessibilidade.html" data-pt="Acessibilidade" data-en="Accessibility">
                     Acessibilidade
                 </a>
-                <a href="/rodape/termos.html" data-pt="Termos de Uso" data-en="Terms of Use">
+                <a href="/rodape/" data-pt="Termos de Uso" data-en="Terms of Use">
                     Termos de Uso
                 </a>
             </div>
@@ -306,107 +313,15 @@
         </div>
     </footer>
 
+
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- Seu JS -->
     <script src="/home/carousel.js"></script>
+    <script src="home.js"></script>
 
-    <script>
-        let leitorAtivo = false;
-        let ultimoTexto = "";
-        let timeout;
 
-        // Ativar / desativar
-        function ativarLeitor() {
-            leitorAtivo = !leitorAtivo;
-            const container = document.getElementById("iconeContainer");
-
-            // Ícones em formato SVG
-            const iconSom = '<svg viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>';
-            const iconMudo = '<svg viewBox="0 0 24 24"><path d="M12,4L9.91,6.09L12,8.18V4M4.27,3L3,4.27L7.73,9H3V15H7L12,20V13.27L16.25,17.53C15.58,18.04 14.83,18.46 14,18.7V20.77C15.38,20.45 16.63,19.82 17.68,18.96L19.73,21L21,19.73L4.27,3M19,12C19,12.94 18.8,13.82 18.46,14.64L19.97,16.15C20.62,14.91 21,13.5 21,12C21,7.72 18,4.14 14,3.23V5.29C16.89,6.15 19,8.83 19,12M16.5,12C16.5,10.23 15.5,8.71 14,7.97V10.18L16.45,12.63C16.48,12.43 16.5,12.22 16.5,12Z" /></svg>';
-
-            // Troca o visual
-            container.innerHTML = leitorAtivo ? iconMudo : iconSom;
-
-            // Faz ele falar o estado atual
-            const aviso = leitorAtivo ? "Leitor ativado" : "Leitor desativado";
-
-            // Força a fala do aviso ignorando a trava de "texto repetido"
-            ultimoTexto = "";
-            falar(aviso)
-        }
-        // Função de fala
-        function falar(texto) {
-            if (!texto || texto === ultimoTexto) return;
-
-            ultimoTexto = texto;
-
-            clearTimeout(timeout);
-            timeout = setTimeout(() => {
-                const fala = new SpeechSynthesisUtterance(texto);
-                fala.lang = "pt-BR";
-                speechSynthesis.cancel();
-                speechSynthesis.speak(fala);
-            }, 300); // pequeno atraso pra evitar spam
-        }
-        // Pegar texto inteligente
-        function pegarTexto(el) {
-            if (!el) return "";
-
-            return (
-                el.getAttribute("aria-label") ||
-                el.alt ||
-                el.placeholder ||
-                el.title ||
-                el.innerText
-            );
-        }
-        // Mouse mais preciso
-        document.addEventListener("mousemove", function (e) {
-            if (!leitorAtivo) return;
-
-            const elemento = document.elementFromPoint(e.clientX, e.clientY);
-
-            if (!elemento) return;
-
-            // Só elementos importantes
-            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
-                const texto = pegarTexto(elemento);
-                falar(texto);
-            }
-        });
-        // Toque no celular
-        document.addEventListener("touchstart", function (e) {
-            if (!leitorAtivo) return;
-
-            const elemento = e.target;
-
-            if (elemento.matches("button, a, p, h1, h2, h3, span, img, input, label")) {
-                const texto = pegarTexto(elemento);
-                falar(texto);
-            }
-        });
-    </script>
-
-    <!-- SCRIPT TRADUÇÃO -->
-    <script>
-        let currentLang = "pt";
-
-        function toggleLanguage() {
-            const texto = document.getElementById("lang-text");
-
-            currentLang = currentLang === "pt" ? "en" : "pt";
-
-            document.querySelectorAll("[data-pt]").forEach(el => {
-                el.innerText = el.getAttribute("data-" + currentLang);
-            });
-
-            // 🔥 muda só o texto, NÃO o botão inteiro
-            texto.innerText = currentLang.toUpperCase();
-        }
-    </script>
-    <!-- Cole o código aqui -->
     <button onclick="ativarLeitor()" id="btnLeitor">
         <div class="btn-inner" id="iconeContainer">
             <!-- Ícone de Som (SVG) -->
@@ -416,50 +331,6 @@
             </svg>
         </div>
     </button>
-    <script>
-
-        function aceitarCookies() {
-            localStorage.setItem("cookieConsent", "accepted");
-            ativarScripts();
-            fecharBanner();
-        }
-
-        function recusarCookies() {
-            localStorage.setItem("cookieConsent", "rejected");
-            fecharBanner();
-        }
-
-        function fecharBanner() {
-            document.getElementById("cookieBanner").style.display = "none";
-        }
-
-        function ativarScripts() {
-            const scripts = document.querySelectorAll('script[type="text/plain"]');
-
-            scripts.forEach(script => {
-                const novoScript = document.createElement("script");
-
-                if (script.src) {
-                    novoScript.src = script.src;
-                } else {
-                    novoScript.textContent = script.textContent;
-                }
-
-                document.body.appendChild(novoScript);
-            });
-        }
-
-        // 🔥 MOSTRAR SEMPRE (como você pediu)
-        window.onload = function () {
-            document.getElementById("cookieBanner").style.display = "flex";
-
-            const consent = localStorage.getItem("cookieConsent");
-
-            if (consent === "accepted") {
-                ativarScripts();
-            }
-        };
-    </script>
 
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>

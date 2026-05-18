@@ -9,14 +9,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/global.css">
 </head>
+
 <body>
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
     </div>
-      
+
     <!-- NAVBAR -->
     <nav class="navbar-1">
         <div class="container d-flex justify-content-between align-items-center flex-wrap">
@@ -89,7 +90,7 @@
 
                 <div class="card">
                     <div class="card-image-container">
-                        <img src="img-museu/salão das lendas1.png" alt="Salão das Lendas" class="card-img">
+                        <img src="img-museu/lendas01.png" alt="Salão das Lendas" class="card-img">
                     </div>
                     <h3 data-pt="Salão das Lendas" data-en="Hall of Legends">Salão das Lendas</h3>
                     <p data-pt="Conheça as histórias dos maiores jogadores através de painéis interativos, vídeos históricos e objetos pessoais que fizeram a diferença nas Copas."
@@ -100,7 +101,11 @@
                 </div>
 
                 <div class="card">
-                    <div class="card-icon">📷</div>
+                    <div class="card">
+                        <div class="card-image-container">
+                            <img src="img-museu/foto01.png" alt="Galeria Fotográfica" class="card-img">
+                        </div>
+                    </div>
                     <h3 data-pt="Galeria Fotográfica" data-en="Photo Gallery">Galeria Fotográfica</h3>
                     <p data-pt="Momentos inesquecíveis capturados em imagens que contam a história emocionante de cada Copa do Mundo."
                         data-en="Unforgettable moments captured in images that tell the exciting history of each World Cup.">
@@ -201,9 +206,9 @@
                     </p>
                 </div>
                 <div class="galeria-grid">
-                    <div class="foto-item"><img src="img-museu/salão das lendas1.png" alt="Lenda 1"></div>
-                    <div class="foto-item"><img src="img-museu/salão das lendas2.png" alt="Lenda 2"></div>
-                    <div class="foto-item"><img src="img-museu/salão das lendas3.png" alt="Lenda 3"></div>
+                    <div class="foto-item"><img src="img-museu/lendas01.png" alt="Lenda 1"></div>
+                    <div class="foto-item"><img src="img-museu/lendas02.png" alt="Lenda 2"></div>
+                    <div class="foto-item"><img src="img-museu/lendas03.png" alt="Lenda 3"></div>
                 </div>
             </div>
 
@@ -218,9 +223,9 @@
                     </p>
                 </div>
                 <div class="galeria-grid">
-                    <div class="foto-item"><img src="img-museu/foto-1.webp" alt="Foto 1"></div>
-                    <div class="foto-item"><img src="img-museu/foto-2.webp" alt="Foto 2"></div>
-                    <div class="foto-item"><img src="img-museu/foto-3.webp" alt="Foto 3"></div>
+                    <div class="foto-item"><img src="img-museu/foto01.png" alt="Foto 1"></div>
+                    <div class="foto-item"><img src="img-museu/foto02.png" alt="Foto 2"></div>
+                    <div class="foto-item"><img src="img-museu/foto03.png" alt="Foto 3"></div>
                 </div>
             </div>
 
@@ -331,18 +336,21 @@
 
         <div class="footer-bottom">
             <p data-pt="Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai"
-               data-en="Developed by @Mariajobs and sponsored by Adilson Bonsai">
+                data-en="Developed by @Mariajobs and sponsored by Adilson Bonsai">
                 Desenvolvido por @Mariajobs e patrocinado por Adilson Bonsai
             </p>
         </div>
     </footer>
 
-<button onclick="ativarLeitor()" id="btnLeitor">
-    <div class="btn-inner" id="iconeContainer">
-        <!-- Ícone de Som (SVG) -->
-        <svg id="svgSom" viewBox="0 0 24 24"><path d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" /></svg>
-    </div>
-</button>
+    <button onclick="ativarLeitor()" id="btnLeitor">
+        <div class="btn-inner" id="iconeContainer">
+            <!-- Ícone de Som (SVG) -->
+            <svg id="svgSom" viewBox="0 0 24 24">
+                <path
+                    d="M14,3.23V5.29C16.89,6.15 19,8.83 19,12C19,15.17 16.89,17.85 14,18.71V20.77C18,19.86 21,16.28 21,12C21,7.72 18,4.14 14,3.23M16.5,12C16.5,10.23 15.5,8.71 14,7.97V16.03C15.5,15.29 16.5,13.77 16.5,12M3,9V15H7L12,20V4L7,9H3Z" />
+            </svg>
+        </div>
+    </button>
 
     <script>
         let leitorAtivo = false;
@@ -363,9 +371,9 @@
 
             // Faz ele falar o estado atual
             const aviso = leitorAtivo ? "Leitor ativado" : "Leitor desativado";
-            
+
             // Força a fala do aviso ignorando a trava de "texto repetido"
-            ultimoTexto = ""; 
+            ultimoTexto = "";
             falar(aviso)
         }
         // Função de fala
@@ -422,38 +430,37 @@
     </script>
 
     <!-- SCRIPT TRADUÇÃO -->
-           <script>
-            let currentLang = "pt";
+    <script>
+        let currentLang = "pt";
 
-function toggleLanguage() {
-    const texto = document.getElementById("lang-text");
+        function toggleLanguage() {
+            const texto = document.getElementById("lang-text");
 
-    currentLang = currentLang === "pt" ? "en" : "pt";
+            currentLang = currentLang === "pt" ? "en" : "pt";
 
-    document.querySelectorAll("[data-pt]").forEach(el => {
-        el.innerText = el.getAttribute("data-" + currentLang);
-    });
+            document.querySelectorAll("[data-pt]").forEach(el => {
+                el.innerText = el.getAttribute("data-" + currentLang);
+            });
 
-    // 🔥 muda só o texto, NÃO o botão inteiro
-    texto.innerText = currentLang.toUpperCase();
-}
-        </script>
-          <!-- Cole o código aqui -->
-<button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
-  
-  <!-- Ícone (fica fixo) -->
-  <svg viewBox="0 0 24 24" width="18" height="18" fill="none"
-       stroke="currentColor" stroke-width="2">
-    <path d="M5 8l6 6"/>
-    <path d="M4 14l6-6 2-3"/>
-    <path d="M2 5h12"/>
-    <path d="M22 22l-5-10-5 10"/>
-  </svg>
+            // 🔥 muda só o texto, NÃO o botão inteiro
+            texto.innerText = currentLang.toUpperCase();
+        }
+    </script>
+    <!-- Cole o código aqui -->
+    <button onclick="toggleLanguage()" id="btn-translate" class="translate-button">
 
-  <!-- Texto (vai mudar) -->
-  <span id="lang-text">PT</span>
+        <!-- Ícone (fica fixo) -->
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 8l6 6" />
+            <path d="M4 14l6-6 2-3" />
+            <path d="M2 5h12" />
+            <path d="M22 22l-5-10-5 10" />
+        </svg>
 
-</button>
+        <!-- Texto (vai mudar) -->
+        <span id="lang-text">PT</span>
+
+    </button>
 
     </button>
 
@@ -464,10 +471,10 @@ function toggleLanguage() {
     </div>
 
     <script src="./museu.js"></script>
-    
+
     <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-      new window.VLibras.Widget('https://vlibras.gov.br/app');
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 </body>
 
